@@ -1,6 +1,4 @@
-venv
 *.pyc
-
 
 # OSX
 .DS_STORE
@@ -8,3 +6,18 @@ AppleDouble
 
 # SASS
 *.sass-cache
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
