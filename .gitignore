@@ -1,2 +1,10 @@
 venv
 *.pyc
+
+
+# OSX
+.DS_STORE
+AppleDouble
+
+# SASS
+*.sass-cache
