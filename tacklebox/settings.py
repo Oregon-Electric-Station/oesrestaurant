@@ -33,6 +33,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.sites',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -57,8 +58,8 @@ WSGI_APPLICATION = 'tacklebox.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.path.join(BASE_DIR, 'db.HEROKU_POSTGRESQL_ORANGE_URL'),
     }
 }
 # Internationalization
@@ -96,13 +97,13 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
-
+STATICFILES_FINDERS = ( 'django.contrib.staticfiles.finders.FileSystemFinder', 'django.contrib.staticfiles.finders.AppDirectoriesFinder', ) 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
 
-
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 
 
