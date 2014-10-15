@@ -1,0 +1,706 @@
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Parallax Scroll
+   ========================================================================== */
+body, html {
+	height: 100%;
+	min-height: 100%;
+	background-color: #000000;
+}
+body {
+	
+}
+.no-js {
+	padding-top: 106px;
+}
+h2 {
+	margin-top: 0;
+}
+.loading {
+	background: url('../img/ico_loading.gif') no-repeat center center;
+}
+section {
+	min-width: 100%;
+	opacity: 0;
+}
+.loaded section,
+.no-js section {
+	opacity: 1;
+	-webkit-transition: opacity 300ms ease-out;
+	-moz-transition: opacity 300ms ease-out;
+	transition: opacity 300ms ease-out;
+}
+main {
+	overflow-x: hidden;
+}
+#preload {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.homeSlide {
+    position: relative;
+    -webkit-transform : translateY(0px);
+    -moz-transform : translateY(0px);
+    -o-transform : translateY(0px);
+    transform : translateY(0px);
+}
+.bcg {
+    position: absolute; 
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+}
+@media (max-width: 1023px) {
+    .bcg {
+        background-attachment: scroll;
+    }
+}
+/*@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    #slide-1 .bcg {background-image:url('../images/SideBar2.jpg') !important}
+}*/
+.hsContainer {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.hsContent {
+	position: absolute;
+	left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;    background: rgba(0, 0, 0, 0.5);
+}
+.hsContent hr {
+    position: absolute;
+    top: 34px;
+    left: 0;
+    border-color: #E0B252;
+    right: 0;
+}
+.hsContent h2  {
+    font-family: 'Lato';
+    display: inline-block;
+	color: #fff;
+    background-color: rgba(0,0,0,0.9);
+    padding: 15px 35px;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 300;
+    margin-bottom: 0 !important;
+}
+.hsContent p {
+    display: inline-block;
+    font-family: 'Lato';
+    font-size: 54px;
+    padding: 8px 30px 0;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 300;
+}
+@media (max-width: 600px) {
+    .hsContent p {
+        font-size: 34px;
+    }
+    .hide-mobile {
+        display: none !important;
+    }
+}
+.hsContent a {
+    background: #a2a2a2;
+    font-family: 'Lato';
+    padding: 2px 18px 4px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    font-size: 17px;
+	color: #000;
+	text-decoration: none;
+    font-weight: 400;
+}
+.next-tab {
+    margin-top: 33px;
+}
+.hsContent .col-md-4 {
+    text-align: center;
+}
+
+/* Slide 1 */
+#slide-1 .bcg {background-image:url('../images/SideBar2.jpg')}
+#slide-1 .hsContent {
+	bottom: 0;
+	top: auto;
+}
+
+/* Slide 2 */
+#slide-2 .bcg {background-image:url('../images/MainBar1.jpg')}
+#slide-2 .hsContent {
+	bottom: 0;
+	top: auto;
+}
+
+/* Slide 3 */
+#slide-3 .bcg {background-image:url('../images/OES19.jpg')}
+#slide-3 .hsContent {
+    bottom: 0;
+}
+
+/* Slide 4 */
+#slide-4 .bcg {background-image:url('../images/oes-widedining-corner.JPG')}
+#slide-4 .hsContent {
+	left: 0;
+    bottom: 0;
+}
+
+/* Slide 5 */
+#slide-5 .bcg {background-image:url('../images/oes-sacajawea.jpg')}
+#slide-5 .hsContent {
+    bottom: 0;
+}
+
+/* Slide 6 */
+#slide-6 .bcg {background-image:url('../images/oes-widedining-platform51.jpg')}
+#slide-6 .hsContent {
+    bottom: 0;
+}
+
+/* Slide 7 */
+#slide-7 .bcg {background-image:url('../images/oes-wide-library.jpg')}
+#slide-7 .hsContent {
+    bottom: 0;
+}
+
+/* Slide 8 */
+#slide-8 {
+    min-height: 1000px !important;
+}
+#slide-8 .bcg {background-image:url('../images/oes-outside.JPG')}
+#slide-8 .hsContent {
+    bottom: 0;
+    top: 0;
+    padding-top: 15px;
+    background: transparent;
+    overflow-y: scroll;
+}
+#slide-8 .section-title.scroller {
+    padding-top: 85px !important;
+}
+@media (max-width: 991px) {
+    #slide-8 .hsContent .bg-trans-black {
+        width: 90%;
+        margin: 20px auto;
+    }
+    #slide-8 {
+        min-height: 1410px !important;
+    }
+    #slide-8 .section-title.scroller {
+        padding-top: 30px;
+    }
+}
+hr.eventer {
+    position: absolute;
+    top: 30px;
+    left: -80px;
+    border-top: 1px solid #E0B252 !important;
+    width: 118%;
+    right: 0;
+}
+#slide-8 .hsContent .bg-trans-black {
+    margin-top: 20px;
+    padding: 20px 0;
+}
+#slide-8 .hsContent .bg-trans-black p {
+    font-size: 16px !important;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.no-border {
+    border: none !important;
+}
+.forward-facing {
+    z-index: 9999 !important;
+}
+.no-border a {
+    color: #fff;
+}
+.party-contact {
+    display: inline-block;
+    float: right;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.91);
+    padding: 15px 25px;
+    max-width: 310px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.party-contact p {
+    font-family: 'Lato';
+    color: #fff;
+    font-size: 16px;
+    line-height: 32px;
+    margin: 0;
+    font-weight: 300;
+}
+.for-checkbox {
+    display: inline-block !important;
+}
+.no-pad-left {
+    padding-left: 0 !important;
+}
+.toggle-room-nav {
+    float: left;
+    border-right: 0 !important;
+}
+.toggle-room-nav.active a {
+    color: white;
+    float: none;
+    border-right: 0 !important;
+}
+.toggle-room-nav a span {
+    position: absolute;
+    left: 3px;
+    top: 6px;
+}
+a.toggle-drop {
+    color: white !important;
+}
+a.toggle-drop:before, a.toggle-reserve:before {
+    content: '';
+    position: fixed;
+    left:0;
+    right:0;
+    top:70px;
+    bottom:0;
+    display: none;
+}
+a.toggle-drop.active:before, a.toggle-reserve.active:before {
+    display: block;
+}
+.toggle-reserve-form {
+    padding-left: 0 !important;
+}
+.toggle-room-nav {
+    padding-right: 0 !important;
+}
+.toggle-reserve-form a {
+    padding-right: 25px !important;
+}
+.toggle-reserve-form a span {
+    position: absolute;
+    right: 3px;
+    top: 0;
+}
+.toggle-reserve-form a span .arrow-down {
+    display: inline-block;
+}
+
+ul.option-dropdown {
+    width: 240px;
+    background: rgba(0,0,0,1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 5px 5px;
+    transition: all 400ms ease-out;
+
+
+    -webkit-transform : translateY(-100%);
+    -moz-transform : translateY(-100%);
+    -o-transform : translateY(-100%);
+    transform : translateY(-100%);
+}
+
+.dropdown-mask {
+    height: 0px;
+    position: absolute;
+    margin-top: 10px;
+    top: 100%;
+    left: 0;
+    width: 240px;
+    overflow: hidden;
+
+    transition: all 300ms ease-out 10ms;
+}
+.dropdown-mask.open {
+    height: 999px;
+
+    transition: all 300ms ease-out;
+}
+.dropdown-mask.open ul.option-dropdown {
+    transition: all 400ms ease-out 10ms;
+    -webkit-transform : translateY(0%);
+    -moz-transform : translateY(0%);
+    -o-transform : translateY(0%);
+    transform : translateY(0%);
+}
+
+
+.reserve-form-mask {
+    height: 0px;
+    position: absolute;
+    margin-top: 10px;
+    top: 100%;
+    right: 0;
+    width: 370px;
+    overflow: hidden;
+
+    transition: all 300ms ease-out 10ms;
+}
+.reserve-form {
+    overflow-y: scroll !important;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 5px 5px;
+    transition: all 400ms ease-out;
+
+
+    -webkit-transform : translateY(-100%);
+    -moz-transform : translateY(-100%);
+    -o-transform : translateY(-100%);
+    transform : translateY(-100%);
+}
+.reserve-form-mask.open {
+    height: 999px;
+
+    transition: all 300ms ease-out;
+}
+.reserve-form-mask.open div.reserve-form {
+    transition: all 400ms ease-out 10ms;
+    -webkit-transform : translateY(0%);
+    -moz-transform : translateY(0%);
+    -o-transform : translateY(0%);
+    transform : translateY(0%);
+}
+
+ul.option-dropdown li {
+    display: block;
+    border: 0;
+}
+ul.option-dropdown li a {
+    text-align: left;
+    display: block;
+    padding: 15px 0;
+}
+.reserve-form p {
+    display: block;
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 10px;
+    text-align: left;
+    color: #e0b252;
+    margin-bottom: 10px;
+}
+.reserve-form label {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    text-align: left;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    vertical-align: bottom;
+    padding-top: 10px;
+}
+.reserve-form input {
+    color: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+    background: #000;
+    border: none;
+    border-bottom: 1px solid;
+}
+.reserve-form input[type="checkbox"] {
+    width: auto;
+}
+.reserve-form .container {
+    max-width: 370px;
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+.reserve-form .form-bg {
+    background: #000;
+
+    display: block;
+    padding: 20px 40px;
+}
+#room-choice .col-md-6, #food-pref .col-md-6, #bar-ops .col-md-6, #bar-ops .col-md-12 {
+    text-align: left;
+}
+#room-choice input, #food-pref input, #bar-ops input {
+    margin-right: 5px;
+}
+#room-choice label, #food-pref label, #bar-ops label {
+    padding-top: 5px;
+    vertical-align: middle;
+}
+
+
+label.pref {
+    margin: 10px 0;
+    color: #e0b252;
+}
+
+.top-space-20 {
+    margin-top: 20px;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

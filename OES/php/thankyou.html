@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>THANK YOU!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="keywords" content="oregon electric station, eugene fine dining, eugene dining" />
+        <meta name="author" content="Oregon Electric Station" />
+        <link rel="shortcut icon" href="favicon.ico"> 
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/bigvideo.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <script src="js/parallax.js"></script>
+        <!-- BigVideo Dependencies -->
+        <script src="js/modernizr-2.5.3.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.8.1.min.js"><\/script>')</script>
+        <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
+        <script src="http://vjs.zencdn.net/c/video.js"></script>
+        <script src="js/bigvideo.js"></script>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="static-bg contact">
+            </div>
+        </div>
+        <div class="mobile-nav">
+            <a href="#" class="nav-icon">
+            </a>
+        </div>
+        <div class="sidebar-nav">
+            <div class="home-wrecka">
+                <a href="index.html"></a>
+            </div>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menus</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="selected">Contact</a></li>
+                <li class="facebook"><a href="https://www.facebook.com/OregonElectricStation"></a></li>
+                <li class="instagram"><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="row fixed-top std-header">
+            <div class="container pos-rel">
+                <div class="home-wrecka main">
+                    <a href="index.html"></a>
+                </div>
+                <ul class="header">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menus</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="reservations.html">Reservations</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="selected">Contact</a></li>
+                    <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation"></a></li>
+                    <li><a class="instagram" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="about" class="to-front">
+            <div class="row top-row-space section-title first">
+                <div class="container">
+                    <div class="col-md-5">
+                        <h2 class="about-bump">Contact</h2>
+                    </div>
+                    <div class="col-md-7">
+                        <hr class="contact"></hr>
+                    </div>
+                </div>
+            </div>
+            <div class="row bg-trans-black mobile-bottom">
+                <div class="container menu-list">
+                    <div class="col-md-6">
+                        <h3 class="first">Hours</h3>
+                        <hr></hr>
+                        <ul>
+                            <li>
+                                <p class="about first">Monday - Friday 11:30am - Close</p>
+                                <p class="about no-space">Saturday 12:00pm - Close</p>
+                                <p class="about no-space">Sunday 5:00pm - Close</p>
+                                <p class="about no-space">For menu specific hours, go to our <a class="contact-menu" href="menu.html">MENUS</a> page.</p>
+                            </li>
+                        </ul>
+                        <h3>Address</h3>
+                        <hr></hr>
+                        <ul>
+                            <li>
+                                <p class="about first">27 East 5th Avenue</p>
+                                <p class="about no-space">Eugene, OR</p>
+                                <p class="about no-space">97401</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="first">Numbers</h3>
+                        <hr></hr>
+                        <ul>
+                            <li>
+                                <p class="about first">Phone: <a class="contact-menu tele" href="tel:+15414854444">(541) 485-4444</a></p>
+
+                                <p class="about no-space">Fax: (541) 485-6149</p>
+                            </li>
+                        </ul>
+                        <h3>Email</h3>
+                        <hr></hr>
+                        <ul>
+                            <li>
+                                <p class="about first"><a class="contact-menu" href="mailto:manager@oesrestaurant.com">manager@oesrestaurant.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $( document ).ready(function() {
+                $(".nav-icon").click(function(){
+                    $(".nav-icon").toggleClass("active");
+                    $(".sidebar-nav").toggleClass("active");
+                });
+            });
+            $( window ).scroll(function() {    
+                var scroll = $(window).scrollTop();
+                if (scroll >= 1000) {
+                    $(".fixed-top").fadeOut();
+                } else {
+                    $(".fixed-top").fadeIn();
+                }
+            });
+        </script>
+    </body>
+</html>
