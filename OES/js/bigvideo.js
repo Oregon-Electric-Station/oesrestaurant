@@ -223,7 +223,7 @@
 		BigVideo.init = function() {
 			if (!isInitialized) {
 				// create player
-				$('body').prepend(wrap);
+				$('.canvas-wrap').before(wrap);
 				var autoPlayString = BigVideo.settings.forceAutoplay ? 'autoplay' : '';
 				player = $('<video id="'+vidEl.substr(1)+'" class="video-js vjs-default-skin" preload="auto" data-setup="{}" '+autoPlayString+' webkit-playsinline></video>');
 				player.css('position','absolute');

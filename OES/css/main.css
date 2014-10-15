@@ -14,6 +14,9 @@ html, body {
     font-family: 'quattro-reg';
     src: url('fonts/Quattrocento-Regular.ttf');
 }
+.noscroll {
+    overflow: hidden !important;
+}
 #OT_form {
     margin-bottom: 28px !important;
     margin-top: 24px !important;
@@ -57,6 +60,27 @@ input.submit-button {
 }
 .toggle-reserve-form.menu {
     display: none !important;
+}
+
+
+.wrapper {
+    position: fixed;
+    top:0;
+    left: 0;
+    right:0;
+    bottom:0;
+    z-index: 0;
+    transition: transform .5s ease-in-out;
+    -webkit-transform : translateX(0px);
+    -moz-transform : translateX(0px);
+    -o-transform : translateX(0px);
+    transform : translateX(0px);
+}
+.wrapper.push {
+    -webkit-transform : translateX(200px);
+    -moz-transform : translateX(200px);
+    -o-transform : translateX(200px);
+    transform : translateX(200px);
 }
 .wrappert {
     position: absolute;
@@ -1034,14 +1058,6 @@ p.about.last {
     display: inline-block;
     text-transform: uppercase;
 }
-
-.nav-icon.activated {
-    transition: transform .5s ease-in-out;
-    -webkit-transform : translateX(200px);
-    -moz-transform : translateX(200px);
-    -o-transform : translateX(200px);
-    transform : translateX(200px);
-}
 .nav-icon.active {
     transition: transform .5s ease-in-out;
     -webkit-transform : translateX(200px);
@@ -1070,16 +1086,22 @@ p.about.last {
     position: fixed;
     top: 0;
     bottom: 0;
+    left: 0;
     overflow-y: scroll;
     width: 200px;
     min-height: 100%;
     background: #000;
-    z-index: 9999999;
+    z-index: 0;
     transition: all .5s ease-in-out;
-    -webkit-transform : translateX(-200px);
-    -moz-transform : translateX(-200px);
-    -o-transform : translateX(-200px);
-    transform : translateX(-200px);
+    -webkit-transform : translateX(-50px);
+    -moz-transform : translateX(-50px);
+    -o-transform : translateX(-50px);
+    transform : translateX(-50px);
+}
+@media (min-width: 1034px) {
+    .sidebar-nav {
+        display: none;
+    }
 }
 .sidebar-nav.active {
     transition: all .5s ease-in-out;
@@ -1295,6 +1317,13 @@ p.about.last {
     width: 100%;
     height: 100%;
     display: block;
+}
+
+.static-bg.home-bg {
+    background-size: cover;
+    background-image: url('../images/oes-firstframe-patio.png');
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .static-bg.contact {
     background-size: cover;
