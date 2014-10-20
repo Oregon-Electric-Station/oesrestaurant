@@ -800,7 +800,7 @@ label.pref {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
   opacity: 0;
   text-align: left;
   visibility: hidden;
@@ -847,7 +847,7 @@ label.pref {
   margin: -3px 0 0 -1px;
 }
 .odal .modal-close:hover:after, .odal .modal-close:hover:before {
-  background: #b3b3b3;
+  background: #e0b252;
 }
 .odal .modal-close:before {
   -webkit-transform: rotate(-45deg);
