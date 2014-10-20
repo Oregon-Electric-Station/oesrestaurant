@@ -14,6 +14,23 @@ html, body {
     font-family: 'quattro-reg';
     src: url('fonts/Quattrocento-Regular.ttf');
 }
+/*ANIMATION */
+@-webkit-keyframes load {
+  from {
+    opacity: 0;
+  }
+}
+@-moz-keyframes load {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes load {
+  from {
+    opacity: 0;
+  }
+}
+
 .noscroll {
     overflow: hidden !important;
 }
@@ -1070,6 +1087,10 @@ p.about.last {
     position: relative;
     overflow: auto;
     transition: transform .5s ease-in-out;
+    -webkit-transform : translateX(0px);
+    -moz-transform : translateX(0px);
+    -o-transform : translateX(0px);
+    transform : translateX(0px);
 }
 @media (max-width: 1034px) {
     .canvas-wrap {
@@ -1110,6 +1131,9 @@ p.about.last {
     -moz-transform : translateX(0px);
     -o-transform : translateX(0px);
     transform : translateX(0px);
+      -webkit-animation: loads 2s forwards;
+      -moz-animation: loads 2s forwards;
+      animation: loads 2s forwards;
 }
 .sidebar-nav ul {
     text-align: center;
