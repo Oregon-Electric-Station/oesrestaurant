@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    -webkit-overflow-scrolling: touch;
 }
 
 @font-face {
@@ -72,6 +73,9 @@ input.submit-button {
     text-transform: uppercase !important;
     color: #000 !important;
     margin-bottom: 0 !important;
+}
+#menu {
+    -webkit-overflow-scrolling: touch;
 }
 .menu-page-head {
     position: absolute !important;
