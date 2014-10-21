@@ -1142,11 +1142,11 @@ p.about.last {
     min-height: 100%;
     background: #000;
     z-index: 0;
-    transition: all .5s ease-in-out;
-    -webkit-transform : translateX(-50px);
-    -moz-transform : translateX(-50px);
-    -o-transform : translateX(-50px);
-    transform : translateX(-50px);
+    transition: all .25s ease-in .5s;
+    -webkit-transform : translateX(-200px);
+    -moz-transform : translateX(-200px);
+    -o-transform : translateX(-200px);
+    transform : translateX(-200px);
 }
 @media (min-width: 1034px) {
     .sidebar-nav {
@@ -1154,14 +1154,11 @@ p.about.last {
     }
 }
 .sidebar-nav.active {
-    transition: all .5s ease-in-out;
+    transition: all .1s ease-out;
     -webkit-transform : translateX(0px);
     -moz-transform : translateX(0px);
     -o-transform : translateX(0px);
     transform : translateX(0px);
-      -webkit-animation: loads 2s forwards;
-      -moz-animation: loads 2s forwards;
-      animation: loads 2s forwards;
 }
 .sidebar-nav ul {
     text-align: center;
