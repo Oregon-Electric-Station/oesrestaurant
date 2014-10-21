@@ -111,6 +111,19 @@ input.submit-button {
     height: 55px;
     width: 100%;
 }
+.wrapper .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+}
+@media (min-width: 725px) {
+    .wrapper .overlay {
+        display: none;
+    }
+}
 .notification-box {
     position: absolute;
     top: 0px;
