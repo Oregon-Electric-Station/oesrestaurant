@@ -62,6 +62,28 @@ $('a[href^="#"]').on('click', function (e) {
     });
 });
 
+
+$(function(){
+    var menuNavTop = $('#menu-bar').offset().top;
+    $(window).scroll(function(){
+        if( $(window).scrollTop() > menuNavTop ) {
+            $(".fixed-top.menu").removeClass("move-down").addClass("move-up");
+            // $('#menu-bar').addClass("stuck");
+        } else {
+            // $('#menu-bar').removeClass("stuck");
+            $(".fixed-top.menu").removeClass("move-up").addClass("move-down");
+        }
+        if( $(window).scrollTop() > 500 ) {
+            $(".fixed-top.reserve").removeClass("move-down").addClass("move-up");
+            // $('#menu-bar').addClass("stuck");
+        } else {
+            // $('#menu-bar').removeClass("stuck");
+            $(".fixed-top.reserve").removeClass("move-up").addClass("move-down");
+        }
+    });
+});
+
+
 // $( window ).scroll(function() {    
 //     var scroll = $(window).scrollTop();
 //     if (scroll >= 100) {
