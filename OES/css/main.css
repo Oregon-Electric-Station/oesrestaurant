@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    -webkit-overflow-scrolling: touch;
 }
 
 @font-face {
@@ -14,6 +15,23 @@ html, body {
     font-family: 'quattro-reg';
     src: url('fonts/Quattrocento-Regular.ttf');
 }
+/*ANIMATION */
+@-webkit-keyframes load {
+  from {
+    opacity: 0;
+  }
+}
+@-moz-keyframes load {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes load {
+  from {
+    opacity: 0;
+  }
+}
+
 .noscroll {
     overflow: hidden !important;
 }
@@ -45,6 +63,7 @@ html, body {
     border-top: 6px solid #fff;
 }
 input.submit-button {
+    border: none;
     border-bottom: 0 !important;
     margin-top: 25px !important;
     padding: 7px 0px !important;
@@ -54,6 +73,9 @@ input.submit-button {
     text-transform: uppercase !important;
     color: #000 !important;
     margin-bottom: 0 !important;
+}
+#menu {
+    -webkit-overflow-scrolling: touch;
 }
 .menu-page-head {
     position: absolute !important;
@@ -1093,6 +1115,10 @@ p.about.last {
     position: relative;
     overflow: auto;
     transition: transform .5s ease-in-out;
+    -webkit-transform : translateX(0px);
+    -moz-transform : translateX(0px);
+    -o-transform : translateX(0px);
+    transform : translateX(0px);
 }
 @media (max-width: 1034px) {
     .canvas-wrap {
@@ -1133,6 +1159,9 @@ p.about.last {
     -moz-transform : translateX(0px);
     -o-transform : translateX(0px);
     transform : translateX(0px);
+      -webkit-animation: loads 2s forwards;
+      -moz-animation: loads 2s forwards;
+      animation: loads 2s forwards;
 }
 .sidebar-nav ul {
     text-align: center;
