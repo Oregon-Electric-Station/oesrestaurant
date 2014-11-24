@@ -1,10 +1,225 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
-<head>
-    <title>Tacklebox</title>           
-	<link rel="stylesheet" type="text/css" href="static/css/style.css" media="screen" />
-</head>
-<body>
-<p>We are Tacklebox</p>    
-</body>
+	<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Oregon Electric Station</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="keywords" content="oregon electric station, eugene fine dining, eugene dining" />
+        <meta name="author" content="Oregon Electric Station" />
+        <link rel="shortcut icon" href="favicon.ico"> 
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="static/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/bigvideo.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+        <script type="text/javascript" src="static/js/parallax.js"></script>
+        <!-- BigVideo Dependencies -->
+        <script type="text/javascript" src="static/js/modernizr-2.5.3.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.8.1.min.js"><\/script>')</script>
+        <script type="text/javascript" src="static/js/jquery-ui-1.8.22.custom.min.js"></script>
+        <script type="text/javascript" src="http://vjs.zencdn.net/c/video.js"></script>
+        <script type="text/javascript" src="static/js/bigvideo.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-56396502-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+        <script type="text/javascript">
+            var BV,
+                isTouch = Modernizr.touch,
+                $window = $(window);
+            $(document).ready(function(){
+                if (!isTouch) {
+                    // initialize BigVideo
+                    BV = new $.BigVideo({forceAutoplay:isTouch});
+                    BV.init();
+                    showVideo();
+                    
+                    BV.getPlayer().addEvent('loadeddata', function() {
+                        onVideoLoaded();
+                    });
+    
+                    // fix image alignment problem
+                    adjustImagePositioning();
+                    // repeat fix when window gets resized
+                    $window.on('resize', adjustImagePositioning);
+                }
+                
+                // Next button click goes to next div
+                $('#next-btn a').on('click', function(e) {
+                    e.preventDefault();
+                    $(".wrapper").animate({left:0-$window.width()},1000,function(){
+                        $(".wrapper .screen:last-child").after($(".wrapper .screen:first-child"));
+                        $(this).css({left:0});
+                        showVideo();
+                    })
+                });
+
+                $('#prev-btn a').on('click', function(e) {
+                    e.preventDefault();
+                    $(".wrapper .screen:first-child").before($(".wrapper .screen:last-child"));
+                    $(".wrapper").css({left:0-$window.width()}).animate({left:0},1000,function(){
+                        showVideo();
+                    });
+                });
+    
+                function showVideo() {
+                    BV.show($('.wrapper .screen:nth-child(1)').attr('data-video'),{ambient:true});
+                    $('.wrapper .screen .big-image').css({opacity:1});
+                }   
+
+                function onVideoLoaded() {
+                    $('.wrapper .screen:nth-child(1)').find('.big-image').animate({opacity:0},500);
+                }
+            });
+
+            function adjustImagePositioning() {
+                $(".big-image").each(function(){
+                    var $img = $(this),img = new Image();
+                    img.src = $img.attr('src');
+
+                    var windowWidth = $window.width(),
+                        windowHeight = $window.height(),
+                        r_w = windowHeight / windowWidth,
+                        i_w = img.width,
+                        i_h = img.height,
+                        r_i = i_h / i_w,
+                        new_w, new_h, new_left, new_top;
+
+                    if( r_w > r_i ) {
+                        new_h   = windowHeight;
+                        new_w   = windowHeight / r_i;
+                    } else {
+                        new_h   = windowWidth * r_i;
+                        new_w   = windowWidth;
+                    }
+
+                    $img.css({
+                        position: "absolute",
+                        width   : new_w,
+                        height  : new_h,
+                        left    : ( windowWidth - new_w ) / 2,
+                        top     : (( windowHeight - new_h ) / 2),
+                        marginTop:-43
+                    });
+                });
+            }
+        </script>
+    </head>
+	<body>
+		<div class="mobile-nav">
+            <a href="#" class="nav-icon">
+            </a>
+        </div>
+        <div class="sidebar-nav">
+            <div class="home-wrecka">
+                <a href="index.html"></a>
+            </div>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menus</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="giftcards.html">Gift Cards</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="facebook"><a href="https://www.facebook.com/OregonElectricStation" target="_blank"></a></li>
+                <!-- <li class="instagram"><a href="#"></a></li> -->
+            </ul>
+        </div>
+        <div class="wrapper">
+                <div class="static-bg home-bg screen" id="screen-1" data-video="video/oes-vidbg.mp4">
+                </div>
+        </div>
+        <div class="canvas-wrap">
+            <div class="row fixed-top homer-top">
+                <div class="container">
+                    <ul class="header">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menus</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="reservations.html">Reservations</a></li>
+                        <li><a href="giftcards.html">Gift Cards</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation" target="_blank"></a></li>
+                        <!-- <li><a class="instagram" href="#"></a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="row to-front">
+                <div class="row top-row-space section-title home first">
+                    <div class="container">
+                        <div class="col-md-9">
+                            <h2>Family Thanksgiving at OES</h2>
+                        </div>
+                        <div class="col-md-3 align-right tday">
+                            <p class="days mobile-first">Thursday</p>
+                            <p>November 27<span>th</span></p>
+                            <hr class="turkeyday"></hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bg-trans-black spacer-bot mobile-bottom">
+                    <div class="container menu-list">
+                        <div class="ul-leaf">
+                        </div>
+                        <div class="ur-leaf">
+                        </div>
+                        <div class="col-md-6 to-fronter">
+                            <h3 class="first">Details</h3>
+                            <hr></hr>
+                            <ul>
+                                <li class="rp-50">
+                                    <p class="about first">Families can hang-up their aprons and leave the grocery list behind for an effortless traditional Thanksgiving dinner at Oregon Electric Station, featuring quintessential fall fixings at an amazing value. Held in our recently renovated restaurant, the buffet dinner is perfect for large families and groups.</p>
+                                    <p class="about tprice">Adults - $35&nbsp&nbsp&nbsp&nbspChildren - $20<span> &nbsp(12 and under)</span></p>
+                                </li>
+                            </ul>
+                            <h3 class="cl">Reservation Times</h3>
+                            <hr></hr>
+                            <ul class="res-times">
+                                <li>
+                                    <p>1:00 pm - 7:00 pm</p>
+                                    <p>Call for Reservations</p>
+                                    <p><a class="contact-menu tele" href="tel:+15414854444">(541) 485-4444</a></p>
+                                </li>
+                                <!-- <li>3:00 pm</li>
+                                <li>5:00 pm</li>
+                                <li>7:00 pm</li> -->
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="first">Meal</h3>
+                            <hr></hr>
+                            <ul>
+                                <li>
+                                    <p class="about first">Our grand Thanksgiving feast includes traditional roast turkey with all the trimmings plus turkey gravy, our famous carved prime rib with aujou, roast salmon with dijon dill cream sauce, veal stuffed ravioli in a creamy wild mushroom sauce, and butternut squash ravioli with butter sage.</p>
+                                    <p class="about">In addition to these delectable dishes we will have savory sausage and sage stuffing, homemade cranberry sauce, sweet potato with marshmallows and maple syrup, fluffy mashed potatoes, gratin potatoes, a vegetable medley of brussels sprouts, string beans, and baby carrots, caesar salad and garden salad with balsamic dressing, eggplant parmigiana, and caprese.</p>
+                                    <p class="about">For dessert there will be fresh pumpkin and apple pie.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="container">
+                    <div class="bi-line">
+                        <div class="mobile-home-logo">
+                        </div>
+                        <h2 class="first">Locally Sourced,</h2>
+                        <h2 class="second">Globally Inspired</h2>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <script src="static/js/oes.js"></script>
+	</body>
 </html>
