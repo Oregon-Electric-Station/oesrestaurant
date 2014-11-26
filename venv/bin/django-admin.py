@@ -1,4 +1,4 @@
-#!/Users/bltoaster/Desktop/tacklebox-web-kettle/venv/bin/python
+#!/home/ubuntu/tacklebox/venv/bin/python
 from django.core import management
 
 if __name__ == "__main__":

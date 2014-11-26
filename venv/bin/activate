@@ -39,7 +39,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/bltoaster/Desktop/tacklebox-web-kettle/venv"
+VIRTUAL_ENV="/home/ubuntu/tacklebox/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
