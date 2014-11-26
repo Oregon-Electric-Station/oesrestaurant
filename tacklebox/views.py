@@ -1,7 +1,6 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext, loader
 from django.http import HttpResponseRedirect
-from scripts import spSign
 import requests, json
 
 def index(request):
