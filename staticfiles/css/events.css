@@ -68,9 +68,6 @@ body, html {
 body {
 	
 }
-.no-js {
-	padding-top: 106px;
-}
 h2 {
 	margin-top: 0;
 }
@@ -247,7 +244,7 @@ main {
 #slide-8 .hsContent {
     bottom: 0;
     top: 0;
-    padding-top: 15px;
+    padding-top: 50px;
     background: transparent;
     overflow-y: scroll;
 }
