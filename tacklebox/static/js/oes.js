@@ -41,26 +41,39 @@ $(".toggle-reserve").click(function(){
     $(".reserve-form-mask").toggleClass('open');
     $(".toggle-reserve").toggleClass('active');
 });
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
 
-$('a[href^="#"]').on('click', function (e) {
-    e.preventDefault();
-    $(document).off("scroll");
-    
-    // $('a').each(function () {
-    //     $(this).removeClass('active');
-    // })
-    // $(this).addClass('active');
-  
-    var target = this.hash,
-        menu = target;
-    $target = $(target);
-    $('html, body').stop().animate({
-        'scrollTop': $target.offset().top+2
-    }, 2000, 'swing', function () {
-        window.location.hash = target;
-        $(document).on("scroll", onScroll);
-    });
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
 });
+// $('a[href^="#"]').on('click', function (e) {
+//     e.preventDefault();
+//     $(document).off("scroll");
+    
+//     // $('a').each(function () {
+//     //     $(this).removeClass('active');
+//     // })
+//     // $(this).addClass('active');
+  
+//     var target = this.hash,
+//         menu = target;
+//     $target = $(target);
+//     $('html, body').stop().animate({
+//         'scrollTop': $target.offset().top
+//     }, 2000, 'swing', function () {
+//         window.location.hash = target;
+//         $(document).on("scroll", onScroll);
+//     });
+// });
 
 $(function(){
     var menuNavTop = $('#menu-bar').offset().top;

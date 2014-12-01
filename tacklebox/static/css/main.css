@@ -402,7 +402,7 @@ img.title-glass.menup {
     background-size: 100%;
 }
 .section-title {
-    padding-top: 80px;
+    padding-top: 100px;
 }
 .section-title h2.event-page {
     display: inline-block;
@@ -725,7 +725,9 @@ p.about.last {
     
 }
 
-
+ul li:first-child h3.first {
+    margin-top: 0px !important;
+}
 
 .menu-list h3 {
     font-family: 'Lato';
@@ -738,8 +740,11 @@ p.about.last {
     text-align: left;
 }
 .menu-list h3.first {
-    margin: 20px 0 16px;
+    margin: 60px 0 16px;
     font-size: 24px !important;
+}
+.menu-list ul li {
+    padding-right: 100px;
 }
 .menu-list hr {
     width: 28px;
@@ -814,6 +819,9 @@ p.about.last {
     text-align: left;
     margin-top: 0 !important;
     padding-bottom: 10px;
+}
+.space-top {
+    margin-top: 80px;
 }
 .spacer-bot {
     margin-bottom: 100px;

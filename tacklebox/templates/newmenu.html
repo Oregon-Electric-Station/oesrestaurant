@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="wrapper">
+        <div class="static-bg menu-bg"></div>
+    </div>
+    <div class="canvas-wrap">
+        <div class="row fixed-top menu std-header">
+            <div class="container pos-rel">
+                <div class="home-wrecka main">
+                    <a href="index.html"></a>
+                </div>
+                <ul class="header">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html" class="selected">Menus</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="reservations.html">Reservations</a></li>
+                    <li><a href="giftcards.html">Gift Cards</a></li>
+                    <li><a href="gallery.html">Gallery</a></li> 
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation" target="_blank"></a></li>
+                    <!-- <li><a class="instagram" href="#"></a></li> -->
+                </ul>
+            </div>
+            <div id="menu-bar" class="menu-page row">
+                <div class="container">
+                    <div class="menu-nav" id="scrollyspy">
+                        <ul class="menu-pieces nav">
+                            <li class="active"><a href="#Bar Menu">Bar</a></li>
+                            <li><a href="#Bar Menu">Lunch</a></li>
+                            <li><a href="#Dinner Menu">Dinner</a></li>
+                            <li><a href="#Dessert Menu">Dessert</a></li>
+                            <!-- <li class="no-border toggle-reserve-form menu"><a href="#drop"><span><div class="arrow-down"></div></span>View Menus</a></li>
+                            <div class="dropdown-hide right-most">
+                                <ul class="option-dropdown closed">
+                                    <li><a href="#barmenu">Bar</a></li>
+                                    <li><a href="#lunchmenu">Lunch</a></li>
+                                    <li><a href="#dinnermenu">Dinner</a></li>
+                                    <li><a href="#dessertmenu">Dessert</a></li>
+                                </ul>  
+                            </div> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="marks" class="to-front space-top">
+        </div>
+    </div>
+    <script type="text/javascript">
+        var data = {{ menu_data|safe }};
+        var menuContainer = document.getElementById('marks');
+        var sectionCounter = 0;
+        var leftDrawer = 0;
+        var menuSum = 0;
+        var sectionItemSum = null;
+        var sectionCountArr = [];
+        for (i in data.menus) {
+            leftSum = 0;
+            leftSum1 = 0;
+            //MENU SUB-SECTION COUNTER FOR SPACE ALLOCATION ON WIDE SCREENS
+            for(k in data.menus[i].entries) {
+                if (data.menus[i].entries[k].type == "section" && sectionItemSum != null) {
+                    sectionCountArr.push(sectionItemSum);
+                    sectionItemSum = 0;
+                } else {
+                    sectionItemSum += 1;
+                    menuSum += 1;
+                }
+            }
+            // alert(sectionCountArr);
+            leftDrawer = Math.floor(menuSum/2);
+            // var counter = 0;
+            // for(var z in sectionCountArr) { 
+            //     counter += 1;
+            //     leftSum += sectionCountArr[z];
+            //     // alert(leftSum);
+            //     if(leftSum <= leftDrawer) {
+            //         leftSum1 = leftSum + counter;
+            //     }
+            // }
+            // alert(leftSum1);
+
+            sectionCountArr = [];
+
+            var sectionHeader = document.createElement("div");
+            sectionHeader.setAttribute("id", data.menus[i].title);
+            sectionHeader.className += 'row section-title first';
+            menuContainer.appendChild(sectionHeader);
+
+            var contentContainer = document.createElement("div");
+            contentContainer.className += 'container';
+            sectionHeader.appendChild(contentContainer);
+
+            var bootstrap5 = document.createElement("div");
+            bootstrap5.className += 'col-md-12';
+            contentContainer.appendChild(bootstrap5);
+
+            var h2 = document.createElement("h2");
+            h2.innerHTML = data.menus[i].title;
+            bootstrap5.appendChild(h2);
+
+            var menuRow = document.createElement("div");
+            menuRow.className += 'row bg-trans-black';
+            menuContainer.appendChild(menuRow);
+
+            var list = document.createElement("ul");
+            var rightlist = document.createElement("ul");
+
+            var contentContainer2 = document.createElement("div");
+            contentContainer2.className += 'container menu-list';
+            menuRow.appendChild(contentContainer2);
+            
+            var bootstrap6 = document.createElement("div");
+            bootstrap6.className += 'col-md-6';
+            contentContainer2.appendChild(bootstrap6);
+            bootstrap6.appendChild(list);
+
+            var rightDrawer = document.createElement("div");
+            rightDrawer.className += 'col-md-6';
+            contentContainer2.appendChild(rightDrawer);
+            rightDrawer.appendChild(rightlist);
+
+            
+
+            var n = 0;
+            
+            for (j in data.menus[i].entries){
+                if (n < leftDrawer) {
+                    var listItem = document.createElement("li");
+                    var itemTitle = document.createElement("h4");
+                    var sectionTitle = document.createElement("h3");
+                    var sectionUnderline = document.createElement("hr");
+                    var itemDesc = document.createElement("p");
+                    listItem.appendChild(itemTitle);
+                    if (data.menus[i].entries[j].type == "section") {
+                        sectionTitle.className += 'first';
+                        sectionTitle.innerHTML = data.menus[i].entries[j].name;
+                        listItem.appendChild(sectionTitle);
+                        listItem.appendChild(sectionUnderline);
+                        sectionCounter += 1;
+                    } else {
+                        itemTitle.innerHTML = data.menus[i].entries[j].name;
+                        if (data.menus[i].entries[j].desc == null) { 
+
+                        } else {
+                            listItem.appendChild(itemDesc);
+                            itemDesc.innerHTML += data.menus[i].entries[j].desc;
+                        }
+                    }
+                    list.appendChild(listItem);
+                } else {
+                    var listItem = document.createElement("li");
+                    var itemTitle = document.createElement("h4");
+                    var sectionTitle = document.createElement("h3");
+                    var sectionUnderline = document.createElement("hr");
+                    var itemDesc = document.createElement("p");
+                    listItem.appendChild(itemTitle);
+                    if (data.menus[i].entries[j].type == "section") {
+                        sectionTitle.className += 'first';
+                        sectionTitle.innerHTML = data.menus[i].entries[j].name;
+                        listItem.appendChild(sectionTitle);
+                        listItem.appendChild(sectionUnderline);
+                        sectionCounter += 1;
+                    } else {
+                        itemTitle.innerHTML = data.menus[i].entries[j].name;
+                        if (data.menus[i].entries[j].desc == null) { 
+
+                        } else {
+                            listItem.appendChild(itemDesc);
+                            itemDesc.innerHTML += data.menus[i].entries[j].desc;
+                        }
+                    }
+                    rightlist.appendChild(listItem);
+                }
+                sectionCounter = 0;
+                menuSum = 0;
+                n += 1;
+            }
+        }    
+    </script>
+{% endblock %}
