@@ -10,6 +10,9 @@ urlpatterns = patterns('',
     # Contact page
     url(r'^contact/$', 'tacklebox.views.contact'),
 
+    # Events page
+    url(r'^events/$', 'tacklebox.views.events'),
+
     # Menu Page
     url(r'^menu/$', 'tacklebox.views.menu'),
 

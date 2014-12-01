@@ -15,6 +15,9 @@ def index(request):
 def contact(request):
     return render_to_response('contact.html')
 
+def events(request):
+    return render_to_response('events.html')
+
 def menu(request):
 	####single platform sign request####
 	def urlSign( uri_path, params, client_id, secret ):
