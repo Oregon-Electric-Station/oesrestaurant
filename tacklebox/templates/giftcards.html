@@ -1,116 +1,60 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <title>Oregon Electric Station</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta name="keywords" content="oregon electric station, eugene fine dining, eugene dining" />
-        <meta name="author" content="Oregon Electric Station" />
-        <link rel="shortcut icon" href="favicon.ico"> 
-        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
-        <link rel="stylesheet" type="text/css" href="css/bigvideo.css" />
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-        <script src="js/parallax.js"></script>
-        <!-- BigVideo Dependencies -->
-        <script src="js/modernizr-2.5.3.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-1.8.1.min.js"><\/script>')</script>
-        <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
-        <script src="http://vjs.zencdn.net/c/video.js"></script>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-          ga('create', 'UA-56396502-1', 'auto');
-          ga('send', 'pageview');
-        </script>
-        <script src="js/bigvideo.js"></script>
-    </head>
-    <body>
-        <div class="mobile-nav">
-            <a href="#" class="nav-icon">
-            </a>
+{% extends 'base.html' %}
+{% block content %}
+    <div class="wrapper">
+        <div class="static-bg giftcards-bg">
         </div>
-        <div class="sidebar-nav">
-            <div class="home-wrecka">
-                <a href="index.html"></a>
-            </div>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="menu.html">Menus</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="reservations.html">Reservations</a></li>
-                <li><a href="giftcards.html" class="selected">Gift Cards</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="facebook"><a href="https://www.facebook.com/OregonElectricStation" target="_blank"></a></li>
-                <!-- <li class="instagram"><a href="#"></a></li> -->
-            </ul>
-        </div>
-        <div class="wrapper">
-            <div class="static-bg giftcards-bg">
-            </div>
-        </div>
-        <div class="canvas-wrap">
-            <div class="row fixed-top std-header">
-                <div class="container pos-rel">
-                    <div class="home-wrecka main">
-                        <a href="index.html"></a>
-                    </div>
-                    <ul class="header">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="menu.html">Menus</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="reservations.html">Reservations</a></li>
-                        <li><a href="gifcards.html" class="selected">Gift Cards</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation" target="_blank"></a></li>
-                       <!--  <li><a class="instagram" href="#"></a></li> -->
-                    </ul>
+    </div>
+    <div class="canvas-wrap">
+        <div class="row fixed-top std-header">
+            <div class="container pos-rel">
+                <div class="home-wrecka main">
+                    <a href="index.html"></a>
                 </div>
+                <ul class="header">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menus</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="reservations.html">Reservations</a></li>
+                    <li><a href="gifcards.html" class="selected">Gift Cards</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation" target="_blank"></a></li>
+                   <!--  <li><a class="instagram" href="#"></a></li> -->
+                </ul>
             </div>
-            <div id="about" class="to-front">
-                <div class="row top-row-space section-title first to-fronter">
-                    <div class="container">
-                        <div class="col-md-5">
-                            <h2 class="about-bump ressy">Gift Cards</h2>
-                        </div>
-                        <div class="col-md-7">
-                            <hr class="gcard"></hr>
-                        </div>
+        </div>
+        <div id="about" class="to-front">
+            <div class="row top-row-space section-title first to-fronter">
+                <div class="container">
+                    <div class="col-md-5">
+                        <h2 class="about-bump ressy">Gift Cards</h2>
                     </div>
-                </div>
-                <div class="row bg-trans-black mobile-bottom">
-                    <div class="container menu-list">
-                        <div class="ul-leaf"></div>
-                        <div class="col-md-12 to-fronter">
-                            <h3 class="first norm">Give tasty tidings to all!</h3>
-                            <hr></hr>
-                        </div>
-                        <div class="col-md-9">
-                            <ul>
-                                <li class="rp-50 bp-20">
-                                    <p class="about first">This Holiday Season, give them a gift they are sure to savor and enjoy an Oregon Electric Station Gift Card!  Treat a loved one, friend or co-worker to an unforgettable dining experience. Our gift cards make perfect gifts for holidays, anniversaries, birthdays, or any special occasion.</p>
-                                    <p class="about">There are two convenient ways to purchase an Oregon Electric Station Gift Card, you can order a gift card online or buy one at the restaurant.  Oregon Electric Station gift cards can be purchased in any denomination and do not expire.</p>
-                                </li>
-                            </ul>
-                            <div id="cpf3f00eb0a9" style="margin: 10px 0" onclick="document.getElementById('pay_now_form_4f0a49fec1').submit()"><div><div class='r-bg '><span class='r-fg r-fg-3'></span> <span class='r-fg r-fg-2'></span> <span class='r-fg r-fg-1'></span> <span class='r-fg r-fg-0'></span> </div><form action="https://globalgatewaye4.firstdata.com/pay" id="pay_now_form_4f0a49fec1" method="post"><input name="x_login" type="hidden" value="WSP-OREGO-z6EEewA1qw" /><input name="x_show_form" type="hidden" value="PAYMENT_FORM" /><input name="x_fp_sequence" type="hidden" value="14153294473266588352" /><input name="x_fp_hash" type="hidden" value="PNB-1.0-9c1d149362f1ea97e45ff661fb09a44ce0ad424f" /><input name="x_amount" type="hidden" /><input name="x_currency_code" type="hidden" value="USD" /><input name="x_test_request" type="hidden" value="FALSE" /><input name="x_relay_response" type="hidden" value="" /><input name="donation_prompt" type="hidden" /><input name="button_code" type="hidden" value="Pay Now Oregon Electric Station" /><div class="cpwrap"><button class="pay-btn" type="button">Buy Now</button></div></form><div class='r-bg '><span class='r-fg r-fg-0'></span> <span class='r-fg r-fg-1'></span> <span class='r-fg r-fg-2'></span> <span class='r-fg r-fg-3'></span> </div></div></div>
-                        </div>
-                        <div class="col-md-3 giftcard-media">
-                            <img src="images/OES7.jpg" />
-                        </div>
+                    <div class="col-md-7">
+                        <hr class="gcard"></hr>
                     </div>
                 </div>
             </div>
-            <script src="js/oes.js"></script>
+            <div class="row bg-trans-black mobile-bottom">
+                <div class="container menu-list">
+                    <div class="ul-leaf"></div>
+                    <div class="col-md-12 to-fronter">
+                        <h3 class="first norm">Give tasty tidings to all!</h3>
+                        <hr></hr>
+                    </div>
+                    <div class="col-md-9">
+                        <ul>
+                            <li class="rp-50 bp-20">
+                                <p class="about first">This Holiday Season, give them a gift they are sure to savor and enjoy an Oregon Electric Station Gift Card!  Treat a loved one, friend or co-worker to an unforgettable dining experience. Our gift cards make perfect gifts for holidays, anniversaries, birthdays, or any special occasion.</p>
+                                <p class="about">There are two convenient ways to purchase an Oregon Electric Station Gift Card, you can order a gift card online or buy one at the restaurant.  Oregon Electric Station gift cards can be purchased in any denomination and do not expire.</p>
+                            </li>
+                        </ul>
+                        <div id="cpf3f00eb0a9" style="margin: 10px 0" onclick="document.getElementById('pay_now_form_4f0a49fec1').submit()"><div><div class='r-bg '><span class='r-fg r-fg-3'></span> <span class='r-fg r-fg-2'></span> <span class='r-fg r-fg-1'></span> <span class='r-fg r-fg-0'></span> </div><form action="https://globalgatewaye4.firstdata.com/pay" id="pay_now_form_4f0a49fec1" method="post"><input name="x_login" type="hidden" value="WSP-OREGO-z6EEewA1qw" /><input name="x_show_form" type="hidden" value="PAYMENT_FORM" /><input name="x_fp_sequence" type="hidden" value="14153294473266588352" /><input name="x_fp_hash" type="hidden" value="PNB-1.0-9c1d149362f1ea97e45ff661fb09a44ce0ad424f" /><input name="x_amount" type="hidden" /><input name="x_currency_code" type="hidden" value="USD" /><input name="x_test_request" type="hidden" value="FALSE" /><input name="x_relay_response" type="hidden" value="" /><input name="donation_prompt" type="hidden" /><input name="button_code" type="hidden" value="Pay Now Oregon Electric Station" /><div class="cpwrap"><button class="pay-btn" type="button">Buy Now</button></div></form><div class='r-bg '><span class='r-fg r-fg-0'></span> <span class='r-fg r-fg-1'></span> <span class='r-fg r-fg-2'></span> <span class='r-fg r-fg-3'></span> </div></div></div>
+                    </div>
+                    <div class="col-md-3 giftcard-media">
+                        <img src="images/OES7.jpg" />
+                    </div>
+                </div>
+            </div>
         </div>
-    </body>
-</html>
+    </div>
+{% endblock %}

@@ -1,9 +1,4 @@
 <html lang="en">
-	<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
@@ -23,6 +18,26 @@
 	<body data-spy="scroll" data-target="#scrollspy">
         <div id="page">
             <div id="content">
+                <div class="mobile-nav">
+                    <a href="#" class="nav-icon">
+                    </a>
+                </div>
+                <div class="sidebar-nav">
+                    <div class="home-wrecka">
+                        <a href="/index"></a>
+                    </div>
+                    <ul>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/menu">Menus</a></li>
+                        <li><a href="/events" class="selected">Events</a></li>
+                        <li><a href="/reservations">Reservations</a></li>
+                        <li><a href="/giftcards">Gift Cards</a></li>
+                        <li><a href="/gallery">Gallery</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li class="facebook"><a href="https://www.facebook.com/OregonElectricStation" target="_blank"></a></li>
+                        <!-- <li class="instagram"><a href="#"></a></li> -->
+                    </ul>
+                </div>
                 {% block content %}
                 {% endblock %}
             </div>

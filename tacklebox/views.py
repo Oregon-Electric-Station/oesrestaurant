@@ -18,6 +18,18 @@ def contact(request):
 def events(request):
     return render_to_response('events.html')
 
+def about(request):
+    return render_to_response('about.html')
+
+def gallery(request):
+    return render_to_response('gallery.html')
+
+def giftcards(request):
+    return render_to_response('giftcards.html')
+
+def reservations(request):
+    return render_to_response('reservations.html')
+
 def menu(request):
 	####single platform sign request####
 	def urlSign( uri_path, params, client_id, secret ):
