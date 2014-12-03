@@ -88,6 +88,6 @@ def menu(request):
 	response_data = r.json()
 	#response_data['menus'] = r.json()
 
-	return render_to_response('newmenu.html',{'menu_data':json.dumps(response_data)})
+	return render_to_response('menu.html',{'menu_data':json.dumps(response_data)})
 
     
