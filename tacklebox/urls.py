@@ -19,6 +19,9 @@ urlpatterns = patterns('',
     # Events page
     url(r'^events/$', 'tacklebox.views.events'),
 
+    # Thank you page
+    url(r'^thankyou/$', 'tacklebox.views.thankyou'),
+
     # About page
     url(r'^about/$', 'tacklebox.views.about'),
 

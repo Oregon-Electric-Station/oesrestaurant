@@ -8,17 +8,17 @@
         <div class="row fixed-top std-header">
             <div class="container pos-rel">
                 <div class="home-wrecka main">
-                    <a href="index.html"></a>
+                    <a href="/index"></a>
                 </div>
                 <ul class="header">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="menu.html">Menus</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="reservations.html">Reservations</a></li>
-                    <li><a href="giftcards.html">Gift Cards</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html" class="selected">Contact</a></li>
-                    <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation" target="_blank"></a></li>
+                    <li><a class="1" href="/about">About</a></li>
+                    <li><a class="2" href="/menu">Menus</a></li>
+                    <li><a class="3" href="/events">Events</a></li>
+                    <li><a class="4" href="/reservations">Reservations</a></li>
+                    <li><a class="5" href="/giftcards">Gift Cards</a></li>
+                    <li><a class="6" href="/gallery" class="selected">Gallery</a></li>
+                    <li><a class="7" href="/contact">Contact</a></li>
+                    <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation"></a></li>
                     <!-- <li><a class="instagram" href="#"></a></li> -->
                 </ul>
             </div>
@@ -80,4 +80,8 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(".header li a").removeClass("selected");
+        $(".header li a.7").addClass("selected");
+    </script>
 {% endblock %}

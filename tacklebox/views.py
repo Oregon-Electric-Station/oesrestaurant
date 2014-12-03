@@ -1,6 +1,8 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext, loader
 from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.core.mail import send_mail
 import hmac
 import hashlib
 import base64
@@ -8,6 +10,7 @@ import string
 import urllib
 import requests
 import json
+from forms import ContactForm
 
 def index(request):
     return render_to_response('index.html')
@@ -15,8 +18,31 @@ def index(request):
 def contact(request):
     return render_to_response('contact.html')
 
+def thankyou(request):
+    return render_to_response('thankyou.html')
+
 def events(request):
-    return render_to_response('events.html')
+	# if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = ContactForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+         	subject = form.cleaned_data['subject']
+         	message = form.cleaned_data['message']
+         	sender = form.cleaned_data['sender']
+         	cc_myself = form.cleaned_data['cc_myself']
+         	recipients = ['mrhebeler@gmail.com']
+         	if cc_myself:
+         		recipients.append(sender)
+
+         	send_mail(subject, message, sender, recipients)
+         	return HttpResponseRedirect('/thankyou/')
+    
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = ContactForm()
+    return render(request, 'events.html', {'form': form})
 
 def about(request):
     return render_to_response('about.html')
@@ -63,3 +89,5 @@ def menu(request):
 	#response_data['menus'] = r.json()
 
 	return render_to_response('newmenu.html',{'menu_data':json.dumps(response_data)})
+
+    

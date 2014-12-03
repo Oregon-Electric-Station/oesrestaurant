@@ -64,7 +64,10 @@ input.submit-button {
 .toggle-reserve-form.menu {
     display: none !important;
 }
-
+.tb-pad {
+    padding: 50px 0;
+    margin-bottom: 100px;
+}
 
 .wrapper {
     position: fixed;
@@ -686,7 +689,9 @@ p.about.last {
     background-size: 100%;
     background-repeat: no-repeat;
 }
-
+.no-top-space {
+    margin-top: 20px !important;
+}
 .ur-leaf {
     position: absolute;
     right: -50px;

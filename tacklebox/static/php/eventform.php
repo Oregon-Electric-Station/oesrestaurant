@@ -1,3 +1,4 @@
+{% load php %}
 <?php
 	if(isset($_POST['Event_Email'])) {
 		include 'eventformsettings.php';
@@ -130,3 +131,4 @@
 	}
 	die();
 ?>
+{% php echo 9; %}

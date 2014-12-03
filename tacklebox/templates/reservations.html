@@ -8,18 +8,18 @@
         <div class="row fixed-top std-header">
             <div class="container pos-rel">
                 <div class="home-wrecka main">
-                    <a href="index.html"></a>
+                    <a href="/index"></a>
                 </div>
                 <ul class="header">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="menu.html">Menus</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="reservations.html" class="selected">Reservations</a></li>
-                    <li><a href="giftcards.html">Gift Cards</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation" target="_blank"></a></li>
-                   <!--  <li><a class="instagram" href="#"></a></li> -->
+                    <li><a class="1" href="/about">About</a></li>
+                    <li><a class="2" href="/menu">Menus</a></li>
+                    <li><a class="3" href="/events">Events</a></li>
+                    <li><a class="4" href="/reservations">Reservations</a></li>
+                    <li><a class="5" href="/giftcards">Gift Cards</a></li>
+                    <li><a class="6" href="/gallery" class="selected">Gallery</a></li>
+                    <li><a class="7" href="/contact">Contact</a></li>
+                    <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation"></a></li>
+                    <!-- <li><a class="instagram" href="#"></a></li> -->
                 </ul>
             </div>
         </div>
@@ -37,7 +37,7 @@
             <div class="row bg-trans-black spacer-bot mobile-bottom">
                 <div class="container menu-list">
                     <div class="col-md-9">
-                        <h3 class="first norm">Please read all steps before making a reservation…</h3>
+                        <h3 class="first norm no-top-space">Please read all steps before making a reservation…</h3>
                         <hr></hr>
                         <ul>
                             <li class="rp-50 bp-20">
@@ -55,16 +55,20 @@
                             <script type="text/javascript" src="https://secure.opentable.com/frontdoor/default.aspx?rid=148456&restref=148456&bgcolor=000000&titlecolor=ffffff&subtitlecolor=E0B252&btnbgimage=https://secure.opentable.com/frontdoor/img/ot_btn_black.png&otlink=FFFFFF&icon=light&mode=short"></script><a href="http://www.opentable.com/oregon-electric-station-reservations-eugene?rtype=ism&restref=148456" class="OT_ExtLink">Oregon Electric Station (148456), Portland / Oregon Reservations</a>
                         </div>
                         <div class="col-md-7 giftcard-media res">
-                            <img class="mh" src="images/OES12.jpg" />
+                            <img class="mh" src="../static/images/oes-sacajawea.jpg" />
                         </div>
                     </div>
                     <div class="col-md-3 giftcard-media res">
-                        <img src="images/oes-sacajawea.jpg" />
-                        <img src="images/OES18.jpg" />
-                        <img src="images/OES20.jpg" />
+                        <img src="../static/images/OES6.jpg" />
+                        <img src="../static/images/OES20.jpg" />
+                        <img src="../static/images/OES18.jpg" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(".header li a").removeClass("selected");
+        $(".header li a.4").addClass("selected");
+    </script>
 {% endblock %}

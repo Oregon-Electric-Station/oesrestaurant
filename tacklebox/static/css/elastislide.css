@@ -22,6 +22,7 @@
 .es-carousel ul li{
 	height:100%;
 	float:left;
+	height: 80px;
 	display:block;
 }
 .es-carousel ul li a{
@@ -46,6 +47,8 @@
 	border: none;
 	max-height: 50px;
 	margin: 0 auto;
+	width: 100%;
+	height: 100%;
 	max-width: 100%;
 }
 .es-nav span{

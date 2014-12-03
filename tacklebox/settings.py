@@ -26,7 +26,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0']
 
-
+PHP_CGI = '/usr/local/bin/php-cgi'
 # Application definition
 
 INSTALLED_APPS = (
@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_php',
 )
 
 MIDDLEWARE_CLASSES = (

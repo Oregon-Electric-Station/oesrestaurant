@@ -11,15 +11,15 @@
                     <a href="index.html"></a>
                 </div>
                 <ul class="header">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="menu.html">Menus</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="reservations.html">Reservations</a></li>
-                    <li><a href="gifcards.html" class="selected">Gift Cards</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation" target="_blank"></a></li>
-                   <!--  <li><a class="instagram" href="#"></a></li> -->
+                    <li><a class="1" href="/about">About</a></li>
+                    <li><a class="2" href="/menu">Menus</a></li>
+                    <li><a class="3" href="/events">Events</a></li>
+                    <li><a class="4" href="/reservations">Reservations</a></li>
+                    <li><a class="5" href="/giftcards">Gift Cards</a></li>
+                    <li><a class="6" href="/gallery" class="selected">Gallery</a></li>
+                    <li><a class="7" href="/contact">Contact</a></li>
+                    <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation"></a></li>
+                    <!-- <li><a class="instagram" href="#"></a></li> -->
                 </ul>
             </div>
         </div>
@@ -48,13 +48,17 @@
                                 <p class="about">There are two convenient ways to purchase an Oregon Electric Station Gift Card, you can order a gift card online or buy one at the restaurant.  Oregon Electric Station gift cards can be purchased in any denomination and do not expire.</p>
                             </li>
                         </ul>
-                        <div id="cpf3f00eb0a9" style="margin: 10px 0" onclick="document.getElementById('pay_now_form_4f0a49fec1').submit()"><div><div class='r-bg '><span class='r-fg r-fg-3'></span> <span class='r-fg r-fg-2'></span> <span class='r-fg r-fg-1'></span> <span class='r-fg r-fg-0'></span> </div><form action="https://globalgatewaye4.firstdata.com/pay" id="pay_now_form_4f0a49fec1" method="post"><input name="x_login" type="hidden" value="WSP-OREGO-z6EEewA1qw" /><input name="x_show_form" type="hidden" value="PAYMENT_FORM" /><input name="x_fp_sequence" type="hidden" value="14153294473266588352" /><input name="x_fp_hash" type="hidden" value="PNB-1.0-9c1d149362f1ea97e45ff661fb09a44ce0ad424f" /><input name="x_amount" type="hidden" /><input name="x_currency_code" type="hidden" value="USD" /><input name="x_test_request" type="hidden" value="FALSE" /><input name="x_relay_response" type="hidden" value="" /><input name="donation_prompt" type="hidden" /><input name="button_code" type="hidden" value="Pay Now Oregon Electric Station" /><div class="cpwrap"><button class="pay-btn" type="button">Buy Now</button></div></form><div class='r-bg '><span class='r-fg r-fg-0'></span> <span class='r-fg r-fg-1'></span> <span class='r-fg r-fg-2'></span> <span class='r-fg r-fg-3'></span> </div></div></div>
+                        <div id="cpf3f00eb0a9" style="margin: 10px 0" onclick="document.getElementById('pay_now_form_4f0a49fec1').submit()"><div><div class='r-bg '><span class='r-fg r-fg-3'></span> <span class='r-fg r-fg-2'></span> <span class='r-fg r-fg-1'></span> <span class='r-fg r-fg-0'></span> </div><form action="https://globalgatewaye4.firstdata.com/pay" id="pay_now_form_4f0a49fec1" method="post"><input name="x_login" type="hidden" value="WSP-OREGO-z6EEewA1qw" /><input name="x_show_form" type="hidden" value="PAYMENT_FORM" /><input name="x_fp_sequence" type="hidden" value="14153294473266588352" /><input name="x_fp_hash" type="hidden" value="PNB-1.0-9c1d149362f1ea97e45ff661fb09a44ce0ad424f" /><input name="x_amount" type="hidden" /><input name="x_currency_code" type="hidden" value="USD" /><input name="x_test_request" type="hidden" value="FALSE" /><input name="x_relay_response" type="hidden" value="" /><input name="donation_prompt" type="hidden" /><input name="button_code" type="hidden" value="Pay Now Oregon Electric Station" /><div class="cpwrap"><button class="pay-btn" type="button">Purchase Here</button></div></form><div class='r-bg '><span class='r-fg r-fg-0'></span> <span class='r-fg r-fg-1'></span> <span class='r-fg r-fg-2'></span> <span class='r-fg r-fg-3'></span> </div></div></div>
                     </div>
                     <div class="col-md-3 giftcard-media">
-                        <img src="images/OES7.jpg" />
+                        <img src="../static/images/OES7.jpg" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(".header li a").removeClass("selected");
+        $(".header li a.5").addClass("selected");
+    </script>
 {% endblock %}

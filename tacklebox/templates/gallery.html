@@ -1,33 +1,4 @@
 {% extends 'base.html' %}
-<head>
-    <!-- PhotoGallery Dependencies -->
-    <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
-    <link rel="stylesheet" type="text/css" href="css/gallery-style.css" />
-    <noscript>
-        <style>
-            .es-carousel ul{
-                display:block;
-            }
-        </style>
-    </noscript>
-    <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">    
-        <div class="rg-image-wrapper">
-            {{if itemsCount > 1}}
-                <div class="rg-image-nav">
-                    <a href="#" class="rg-image-nav-prev">Previous Image</a>
-                    <a href="#" class="rg-image-nav-next">Next Image</a>
-                </div>
-            {{/if}}
-            <div class="rg-image"></div>
-            <div class="rg-loading"></div>
-            <div class="rg-caption-wrapper">
-                <div class="rg-caption" style="display:none;">
-                    <p></p>
-                </div>
-            </div>
-        </div>
-    </script>
-</head>
 {% block content %}
     <div class="wrapper">
         <div class="static-bg gallery">
@@ -40,13 +11,13 @@
                     <a href="index.html"></a>
                 </div>
                 <ul class="header">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="menu.html">Menus</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="reservations.html">Reservations</a></li>
-                    <li><a href="giftcards.html">Gift Cards</a></li>
-                    <li><a href="gallery.html" class="selected">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="1" href="/about">About</a></li>
+                    <li><a class="2" href="/menu">Menus</a></li>
+                    <li><a class="3" href="/events">Events</a></li>
+                    <li><a class="4" href="/reservations">Reservations</a></li>
+                    <li><a class="5" href="/giftcards">Gift Cards</a></li>
+                    <li><a class="6" href="/gallery" class="selected">Gallery</a></li>
+                    <li><a class="7" href="/contact">Contact</a></li>
                     <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation"></a></li>
                     <!-- <li><a class="instagram" href="#"></a></li> -->
                 </ul>
@@ -63,81 +34,209 @@
                     </div>
                 </div>
             </div>
-            <div class="row bg-black mobile-bottom">
-                <div class="container menu-list">
+            <div class="row bg-black mobile-bottom tb-pad">
+                <div class="container">
                     <div class="col-md-12">
-                        <div class="content">
-                            <div id="rg-gallery" class="rg-gallery">
-                                <div class="rg-thumbs">
-                                    <!-- Elastislide Carousel Thumbnail Viewer -->
-                                    <div class="es-carousel-wrapper">
-                                        <div class="es-carousel">
-                                            <ul>
-                                                
-                                                
-                                                <li><a href="#"><img src="images/OES28.jpg" data-large="images/OES28.jpg" alt="image09" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/OES30.jpg" data-large="images/OES30.jpg" alt="image14" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/OES27.jpg" data-large="images/OES27.jpg" alt="image06" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/OES29.jpg" data-large="images/OES29.jpg" alt="image04" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/OES31.jpg" data-large="images/OES31.jpg" alt="image24" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/OES32.jpg" data-large="images/OES32.jpg" alt="image10" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/OES1.jpg" data-large="images/OES1.jpg" alt="image01" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/oes-outside.JPG" data-large="images/oes-outside.JPG" alt="image89" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/MainBar1.jpg" data-large="images/MainBar1.jpg" alt="image01" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/SideBar2.jpg" data-large="images/SideBar2.jpg" alt="image84" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/oes-widedining-platform51.jpg" data-large="images/oes-widedining-platform51.jpg" alt="image80" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/OES19.jpg" data-large="images/OES19.jpg" alt="image22" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/oes-widedining-corner.JPG" data-large="images/oes-widedining-corner.JPG" alt="image82" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/OES20.jpg" data-large="images/OES20.jpg" alt="image05" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/OES3.jpg" data-large="images/OES3.jpg" alt="image12" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/oes-sacajawea.jpg" data-large="images/oes-sacajawea.jpg" alt="image88" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/oes-wide-library.jpg" data-large="images/oes-wide-library.jpg" alt="image81" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/Patio3.jpg" data-large="images/Patio3.jpg" alt="image29" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/OES11.jpg" data-large="images/OES11.jpg" alt="image15" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/OES2.jpg" data-large="images/OES2.jpg" alt="image20" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/OES23.jpg" data-large="images/OES23.jpg" alt="image23" data-description="d" /></a></li>
-
-                                                <li><a href="#"><img src="images/OES7.jpg" data-large="images/OES7.jpg" alt="image24" data-description="d" /></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="es-nav">
-                                            <span class="es-nav-prev">Previous</span>
-                                            <span class="es-nav-next">Next</span>
-                                        </div>
-                                    </div>
-                                </div><!-- rg-thumbs -->
-                            </div><!-- rg-gallery -->
-                        </div>
+                        <section class="slider">
+                            <div id="slider" class="flexslider">
+                              <ul class="slides">
+                                <li>
+                                    <img src="../static/images/OES28.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES30.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES27.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES29.jpg" />
+                                    </li>
+                                <li>
+                                    <img src="../static/images/OES31.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES32.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES7.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/oes-outside.JPG" />
+                                    </li>
+                                <li>
+                                    <img src="../static/images/MainBar1.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/SideBar2.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/oes-widedining-platform51.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES19.jpg" />
+                                    </li>
+                                <li>
+                                    <img src="../static/images/oes-widedining-corner.JPG" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES20.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES3.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/oes-sacajawea.jpg" />
+                                    </li>
+                                <li>
+                                    <img src="../static/images/oes-wide-library.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/Patio3.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES11.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES2.jpg" />
+                                    </li>
+                                <li>
+                                    <img src="../static/images/OES23.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES7.jpg" />
+                                    </li>
+                              </ul>
+                            </div>
+                            <div id="carousel" class="flexslider">
+                              <ul class="slides">
+                                <li>
+                                    <img src="../static/images/OES28.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES30.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES27.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES29.jpg" />
+                                    </li>
+                                <li>
+                                    <img src="../static/images/OES31.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES32.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES7.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/oes-outside.JPG" />
+                                    </li>
+                                <li>
+                                    <img src="../static/images/MainBar1.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/SideBar2.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/oes-widedining-platform51.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES19.jpg" />
+                                    </li>
+                                <li>
+                                    <img src="../static/images/oes-widedining-corner.JPG" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES20.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES3.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/oes-sacajawea.jpg" />
+                                    </li>
+                                <li>
+                                    <img src="../static/images/oes-wide-library.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/Patio3.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES11.jpg" />
+                                    </li>
+                                    <li>
+                                    <img src="../static/images/OES2.jpg" />
+                                    </li>
+                                <li>
+                                    <img src="../static/images/OES23.jpg" />
+                                    </li>
+                                    
+                              </ul>
+                            </div>
+                          </section>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../static/js/gallery/gallery.js"></script>
-    <script type="text/javascript" src="../static/js/gallery/jquery.tmpl.min.js"></script>
-    <script type="text/javascript" src="../static/js/gallery/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="../static/js/gallery/jquery.elastislide.js"></script>
-    <script type="text/javascript" src="../static/js/gallery/mobile-menu.js"></script>
-    <script type="text/javascript" src="../static/js/gallery/elastislide-autoplay.js"></script>
+    <script type="text/javascript">
+        $(".header li a").removeClass("selected");
+        $(".header li a.6").addClass("selected");
+    </script>
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="../static/css/flexslider.css" type="text/css" media="screen" />
+
+    <!-- Modernizr -->
+    <script src="../static/js/gallery2/modernizr.js"></script>
+
+
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.1.min.js">\x3C/script>')</script>
+
+    <!-- FlexSlider -->
+    <script src="../static/js/gallery2/jquery.flexslider.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+          SyntaxHighlighter.all();
+        });
+        $(window).load(function(){
+          $('#carousel').flexslider({
+            animation: "slide",
+            controlNav: false,
+            animationLoop: false,
+            slideshow: false,
+            itemWidth: 150,
+            itemMargin: 10,
+            asNavFor: '#slider'
+          });
+
+          $('#slider').flexslider({
+            animation: "slide",
+            controlNav: false,
+            animationLoop: false,
+            slideshow: false,
+            sync: "#carousel",
+            start: function(slider){
+              $('body').removeClass('loading');
+            }
+          });
+          $(".flex-next").contents().filter(function(){ return this.nodeType != 1; }).remove();
+          $(".flex-prev").contents().filter(function(){ return this.nodeType != 1; }).remove();
+        });
+    </script>
+
+
+    <!-- Syntax Highlighter -->
+    <script type="text/javascript" src="../static/js/gallery2/shCore.js"></script>
+    <script type="text/javascript" src="../static/js/gallery2/shBrushXml.js"></script>
+    <script type="text/javascript" src="../static/js/gallery2/shBrushJScript.js"></script>
+
+    <!-- Optional FlexSlider Additions -->
+    <script src="../static/js/gallery2/jquery.easing.js"></script>
+    <script src="../static/js/gallery2/jquery.mousewheel.js"></script>
 {% endblock %}
