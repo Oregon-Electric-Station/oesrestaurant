@@ -148,6 +148,8 @@
                     var sectionTitle = document.createElement("h3");
                     var sectionUnderline = document.createElement("hr");
                     var itemDesc = document.createElement("p");
+                    var itemPrice = document.createElement("p");
+                    itemPrice.className += 'price';
                     listItem.appendChild(itemTitle);
                     if (data.menus[i].entries[j].type == "section") {
                         sectionTitle.className += 'first';
@@ -160,6 +162,10 @@
                         if (data.menus[i].entries[j].desc != null) { 
                             listItem.appendChild(itemDesc);
                             itemDesc.innerHTML += data.menus[i].entries[j].desc;
+                            if (data.menus[i].entries[j].prices[0] != null) {
+                                listItem.appendChild(itemPrice);
+                                itemPrice.innerHTML += data.menus[i].entries[j].prices[0].price;
+                            }
                         }
                     }
                     list.appendChild(listItem);
@@ -169,6 +175,8 @@
                     var sectionTitle = document.createElement("h3");
                     var sectionUnderline = document.createElement("hr");
                     var itemDesc = document.createElement("p");
+                    var itemPrice = document.createElement("p");
+                    itemPrice.className += 'price';
                     listItem.appendChild(itemTitle);
                     if (data.menus[i].entries[j].type == "section") {
                         sectionTitle.className += 'first';
@@ -181,6 +189,10 @@
                         if (data.menus[i].entries[j].desc != null) { 
                             listItem.appendChild(itemDesc);
                             itemDesc.innerHTML += data.menus[i].entries[j].desc;
+                            if (data.menus[i].entries[j].prices[0] != null) {
+                                listItem.appendChild(itemPrice);
+                                itemPrice.innerHTML += data.menus[i].entries[j].prices[0].price;
+                            } 
                         }
                     }
                     rightlist.appendChild(listItem);
