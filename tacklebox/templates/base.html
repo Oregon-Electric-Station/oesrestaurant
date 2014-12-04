@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="keywords" content="oregon electric station, eugene fine dining, eugene dining" />
         <meta name="author" content="Oregon Electric Station" />
-        <link rel="shortcut icon" href="favicon.ico"> 
+        <link rel="shortcut icon" type="image/ico" href="../static/images/favicon.ico"> 
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="../static/css/main.css" />
         <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-scrollspy.js"></script>
@@ -14,7 +14,91 @@
         <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> 
         <script>window.jQuery || document.write('<script src="../static/js/jquery-1.8.1.min.js"><\/script>')</script> 
+        <script type="text/javascript" src="../static/js/modernizr-2.5.3.min.js"></script>
+        <script type="text/javascript" src="../static/js/jquery-ui-1.8.22.custom.min.js"></script>
+        <script type="text/javascript" src="http://vjs.zencdn.net/c/video.js"></script>
+        <script type="text/javascript" src="../static/js/bigvideo.js"></script>
+        <script type="text/javascript">
+            var BV,
+                isTouch = Modernizr.touch,
+                $window = $(window);
+            $(document).ready(function(){
+                if (!isTouch) {
+                    // initialize BigVideo
+                    BV = new $.BigVideo({forceAutoplay:isTouch});
+                    BV.init();
+                    showVideo();
+                    
+                    BV.getPlayer().addEvent('loadeddata', function() {
+                        onVideoLoaded();
+                    });
+    
+                    // fix image alignment problem
+                    adjustImagePositioning();
+                    // repeat fix when window gets resized
+                    $window.on('resize', adjustImagePositioning);
+                }
+                
+                // Next button click goes to next div
+                $('#next-btn a').on('click', function(e) {
+                    e.preventDefault();
+                    $(".wrapper").animate({left:0-$window.width()},1000,function(){
+                        $(".wrapper .screen:last-child").after($(".wrapper .screen:first-child"));
+                        $(this).css({left:0});
+                        showVideo();
+                    })
+                });
 
+                $('#prev-btn a').on('click', function(e) {
+                    e.preventDefault();
+                    $(".wrapper .screen:first-child").before($(".wrapper .screen:last-child"));
+                    $(".wrapper").css({left:0-$window.width()}).animate({left:0},1000,function(){
+                        showVideo();
+                    });
+                });
+    
+                function showVideo() {
+                    BV.show($('.wrapper .screen:nth-child(1)').attr('data-video'),{ambient:true});
+                    $('.wrapper .screen .big-image').css({opacity:1});
+                }   
+
+                function onVideoLoaded() {
+                    $('.wrapper .screen:nth-child(1)').find('.big-image').animate({opacity:0},500);
+                }
+            });
+
+            function adjustImagePositioning() {
+                $(".big-image").each(function(){
+                    var $img = $(this),img = new Image();
+                    img.src = $img.attr('src');
+
+                    var windowWidth = $window.width(),
+                        windowHeight = $window.height(),
+                        r_w = windowHeight / windowWidth,
+                        i_w = img.width,
+                        i_h = img.height,
+                        r_i = i_h / i_w,
+                        new_w, new_h, new_left, new_top;
+
+                    if( r_w > r_i ) {
+                        new_h   = windowHeight;
+                        new_w   = windowHeight / r_i;
+                    } else {
+                        new_h   = windowWidth * r_i;
+                        new_w   = windowWidth;
+                    }
+
+                    $img.css({
+                        position: "absolute",
+                        width   : new_w,
+                        height  : new_h,
+                        left    : ( windowWidth - new_w ) / 2,
+                        top     : (( windowHeight - new_h ) / 2),
+                        marginTop:-43
+                    });
+                });
+            }
+        </script>
     </head>
 	<body data-spy="scroll" data-target="#scrollspy">
         <div id="page">

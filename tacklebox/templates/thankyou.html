@@ -1,59 +1,5 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <title>Oregon Electric Station</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta name="keywords" content="oregon electric station, eugene fine dining, eugene dining" />
-        <meta name="author" content="Oregon Electric Station" />
-        <link rel="shortcut icon" href="favicon.ico"> 
-        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
-        <link rel="stylesheet" type="text/css" href="css/bigvideo.css" />
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-        <script src="js/parallax.js"></script>
-        <!-- BigVideo Dependencies -->
-        <script src="js/modernizr-2.5.3.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-1.8.1.min.js"><\/script>')</script>
-        <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
-        <script src="http://vjs.zencdn.net/c/video.js"></script>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-          ga('create', 'UA-56396502-1', 'auto');
-          ga('send', 'pageview');
-        </script>
-        <script src="js/bigvideo.js"></script>
-    </head>
-    <body>
-        <div class="mobile-nav">
-            <a href="#" class="nav-icon">
-            </a>
-        </div>
-        <div class="sidebar-nav">
-            <div class="home-wrecka">
-                <a href="index.html"></a>
-            </div>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="menu.html">Menus</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="reservations.html">Reservations</a></li>
-                <li><a href="giftcards.html">Gift Cards</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html" class="selected">Contact</a></li>
-                <li class="facebook"><a href="https://www.facebook.com/OregonElectricStation"></a></li>
-                <!-- <li class="instagram"><a href="#"></a></li> -->
-            </ul>
-        </div>
+{% extends 'base.html' %}
+{% block content %}
         <div class="wrapper">
             <div class="static-bg contact">
             </div>
@@ -61,18 +7,18 @@
         <div class="row fixed-top std-header">
             <div class="container pos-rel">
                 <div class="home-wrecka main">
-                    <a href="index.html"></a>
+                    <a href="/index"></a>
                 </div>
                 <ul class="header">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="menu.html">Menus</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="reservations.html">Reservations</a></li>
-                    <li><a href="giftcards.html">Gift Cards</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html" class="selected">Contact</a></li>
-                    <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation" target="_blank"></a></li>
-                   <!--  <li><a class="instagram" href="#"></a></li> -->
+                    <li><a class="1" href="/about">About</a></li>
+                    <li><a class="2" href="/menu">Menus</a></li>
+                    <li><a class="3" href="/events">Events</a></li>
+                    <li><a class="4" href="/reservations">Reservations</a></li>
+                    <li><a class="5" href="/giftcards">Gift Cards</a></li>
+                    <li><a class="6" href="/gallery" class="selected">Gallery</a></li>
+                    <li><a class="7" href="/contact">Contact</a></li>
+                    <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation"></a></li>
+                    <!-- <li><a class="instagram" href="#"></a></li> -->
                 </ul>
             </div>
         </div>
@@ -140,6 +86,8 @@
                 </div>
             </div>
         </div>
-        <script src="js/oes.js"></script>
-    </body>
-</html>
+    <script type="text/javascript">
+        $(".header li a").removeClass("selected");
+        $(".header li a.7").addClass("selected");
+    </script>
+{% endblock %}

@@ -22,6 +22,9 @@ urlpatterns = patterns('',
     # Thank you page
     url(r'^thankyou/$', 'tacklebox.views.thankyou'),
 
+     #Email Failure page
+    url(r'^failed/$', 'tacklebox.views.failed'),   
+
     # About page
     url(r'^about/$', 'tacklebox.views.about'),
 

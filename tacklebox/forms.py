@@ -1,7 +1,9 @@
 from django import forms
 
+
 class ContactForm(forms.Form):
-    subject = forms.CharField(max_length=100)
-    message = forms.CharField(widget=forms.Textarea)
-    sender = forms.EmailField()
-    cc_myself = forms.BooleanField(required=False)
+    fullName = forms.CharField(max_length=128, label='Full Name')
+    eventDate = forms.CharField(max_length=32, label='Event Date')
+    guestNum = forms.CharField(max_length=10, label='Guest Number')
+    phoneNumber = forms.CharField(max_length=20, label='Phone Number')
+    sender = forms.EmailField(label='Email Address')

@@ -1,102 +1,4 @@
 {% extends 'base.html' %}
-<head>
-	<!-- BigVideo Dependencies -->
-        <script type="text/javascript" src="../static/js/modernizr-2.5.3.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-1.8.1.min.js"><\/script>')</script>
-        <script type="text/javascript" src="../static/js/jquery-ui-1.8.22.custom.min.js"></script>
-        <script type="text/javascript" src="http://vjs.zencdn.net/c/video.js"></script>
-        <script type="text/javascript" src="../static/js/bigvideo.js"></script>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-          ga('create', 'UA-56396502-1', 'auto');
-          ga('send', 'pageview');
-        </script>
-        <script type="text/javascript">
-            var BV,
-                isTouch = Modernizr.touch,
-                $window = $(window);
-            $(document).ready(function(){
-                if (!isTouch) {
-                    // initialize BigVideo
-                    BV = new $.BigVideo({forceAutoplay:isTouch});
-                    BV.init();
-                    showVideo();
-                    
-                    BV.getPlayer().addEvent('loadeddata', function() {
-                        onVideoLoaded();
-                    });
-    
-                    // fix image alignment problem
-                    adjustImagePositioning();
-                    // repeat fix when window gets resized
-                    $window.on('resize', adjustImagePositioning);
-                }
-                
-                // Next button click goes to next div
-                $('#next-btn a').on('click', function(e) {
-                    e.preventDefault();
-                    $(".wrapper").animate({left:0-$window.width()},1000,function(){
-                        $(".wrapper .screen:last-child").after($(".wrapper .screen:first-child"));
-                        $(this).css({left:0});
-                        showVideo();
-                    })
-                });
-
-                $('#prev-btn a').on('click', function(e) {
-                    e.preventDefault();
-                    $(".wrapper .screen:first-child").before($(".wrapper .screen:last-child"));
-                    $(".wrapper").css({left:0-$window.width()}).animate({left:0},1000,function(){
-                        showVideo();
-                    });
-                });
-    
-                function showVideo() {
-                    BV.show($('.wrapper .screen:nth-child(1)').attr('data-video'),{ambient:true});
-                    $('.wrapper .screen .big-image').css({opacity:1});
-                }   
-
-                function onVideoLoaded() {
-                    $('.wrapper .screen:nth-child(1)').find('.big-image').animate({opacity:0},500);
-                }
-            });
-
-            function adjustImagePositioning() {
-                $(".big-image").each(function(){
-                    var $img = $(this),img = new Image();
-                    img.src = $img.attr('src');
-
-                    var windowWidth = $window.width(),
-                        windowHeight = $window.height(),
-                        r_w = windowHeight / windowWidth,
-                        i_w = img.width,
-                        i_h = img.height,
-                        r_i = i_h / i_w,
-                        new_w, new_h, new_left, new_top;
-
-                    if( r_w > r_i ) {
-                        new_h   = windowHeight;
-                        new_w   = windowHeight / r_i;
-                    } else {
-                        new_h   = windowWidth * r_i;
-                        new_w   = windowWidth;
-                    }
-
-                    $img.css({
-                        position: "absolute",
-                        width   : new_w,
-                        height  : new_h,
-                        left    : ( windowWidth - new_w ) / 2,
-                        top     : (( windowHeight - new_h ) / 2),
-                        marginTop:-43
-                    });
-                });
-            }
-        </script>
-</head>
 {% block content %}
         <div class="wrapper">
             <div class="static-bg home-bg screen" id="screen-1" data-video="../static/video/oes-vidbg.mp4"></div>
@@ -110,9 +12,9 @@
                         <li><a href="/events">Events</a></li>
                         <li><a href="/reservations">Reservations</a></li>
                         <li><a href="/giftcards">Gift Cards</a></li>
-                        <li><a href="/gallery" class="selected">Gallery</a></li>
+                        <li><a href="/gallery">Gallery</a></li>
                         <li><a href="/contact">Contact</a></li>
-                        <li><a class="facebook" href="https://www.facebook.com/OregonElectricStation"></a></li>
+                        <li><a class="facebook" target="_blank" href="https://www.facebook.com/OregonElectricStation"></a></li>
                         <!-- <li><a class="instagram" href="#"></a></li> -->
                     </ul>
                 </div>

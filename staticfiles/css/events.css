@@ -68,6 +68,9 @@ body, html {
 body {
 	
 }
+.no-js {
+	padding-top: 0;
+}
 h2 {
 	margin-top: 0;
 }
@@ -244,7 +247,7 @@ main {
 #slide-8 .hsContent {
     bottom: 0;
     top: 0;
-    padding-top: 50px;
+    padding-top: 15px;
     background: transparent;
     overflow-y: scroll;
 }
@@ -354,7 +357,7 @@ a.toggle-drop.active:before, a.toggle-reserve.active:before {
 .toggle-reserve-form a span {
     position: absolute;
     right: 3px;
-    top: 0;
+    top: 5px;
 }
 .toggle-reserve-form a span .arrow-down {
     display: inline-block;

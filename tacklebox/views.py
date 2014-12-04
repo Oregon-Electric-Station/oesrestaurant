@@ -11,6 +11,8 @@ import urllib
 import requests
 import json
 from forms import ContactForm
+from django.core.mail import send_mail
+
 
 def index(request):
     return render_to_response('index.html')
@@ -21,6 +23,9 @@ def contact(request):
 def thankyou(request):
     return render_to_response('thankyou.html')
 
+def failed(request):
+    return render_to_response('failed.html')
+
 def events(request):
 	# if this is a POST request we need to process the form data
     if request.method == 'POST':
@@ -28,17 +33,17 @@ def events(request):
         form = ContactForm(request.POST)
         # check whether it's valid:
         if form.is_valid():
-         	subject = form.cleaned_data['subject']
-         	message = form.cleaned_data['message']
-         	sender = form.cleaned_data['sender']
-         	cc_myself = form.cleaned_data['cc_myself']
-         	recipients = ['mrhebeler@gmail.com']
-         	if cc_myself:
-         		recipients.append(sender)
-
-         	send_mail(subject, message, sender, recipients)
-         	return HttpResponseRedirect('/thankyou/')
-    
+         	fullName = form.cleaned_data['fullName']
+         	eventDate = form.cleaned_data['eventDate']
+         	guestNum = form.cleaned_data['guestNum']
+         	phoneNumber = form.cleaned_data['phoneNumber']
+         	sender= form.cleaned_data['sender']
+         	recipients = ["mrhebeler@gmail.com"]
+         	subject = "Private Event Inquiry from " + fullName
+         	message = 	"Name: \n" + fullName + "\n\n" + "Event Date: \n" + eventDate + "\n\n" + "Guest Number: \n" + guestNum + "\n\n" + "Phone Number: \n" + phoneNumber + "\n\n" + "Email Address: \n" + sender + "\n\n" 
+         	if send_mail(subject, message, sender, recipients, fail_silently=False):
+         		return HttpResponseRedirect('/thankyou/')
+         	return HttpResponseRedirect('/failure/')         	
     # if a GET (or any other method) we'll create a blank form
     else:
         form = ContactForm()
