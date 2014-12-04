@@ -41,7 +41,7 @@ def events(request):
          	guestNum = form.cleaned_data['guestNum']
          	phoneNumber = form.cleaned_data['phoneNumber']
          	sender= form.cleaned_data['sender']
-         	recipients = ["mrhebeler@gmail.com"]
+         	recipients = ["eventcoordinator@oesrestaurant.com"]
          	subject = "Private Event Inquiry from " + fullName
          	message = 	"Name: \n" + fullName + "\n\n" + "Event Date: \n" + eventDate + "\n\n" + "Guest Number: \n" + guestNum + "\n\n" + "Phone Number: \n" + phoneNumber + "\n\n" + "Email Address: \n" + sender + "\n\n" 
          	if send_mail(subject, message, sender, recipients, fail_silently=False):

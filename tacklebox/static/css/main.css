@@ -184,7 +184,7 @@ a.skinner:hover {
     }
 }
 .menu-list {
-    padding-bottom: 30px !important;
+    padding: 20px 0 70px !important;
     position: relative;
 }
 #menu {
@@ -275,8 +275,8 @@ a.skinner:hover {
     }
     .toggle-reserve-form a span {
         position: absolute;
-        right: 10px !important;
-        top: 1px !important;
+        right: 6px !important;
+        top: 5px !important;
     }
 
 }

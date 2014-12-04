@@ -17,9 +17,6 @@ html, body {
 .noscroll {
     overflow: hidden !important;
 }
-.ts-20 {
-    margin-top: 25px !important;
-}
 #OT_form {
     margin-bottom: 28px !important;
     margin-top: 24px !important;
@@ -71,9 +68,6 @@ input.submit-button {
     padding: 50px 0;
     margin-bottom: 100px;
 }
-.notification-box.gc p.f {
-    margin-top: 5px;
-}
 
 .wrapper {
     position: fixed;
@@ -101,12 +95,6 @@ input.submit-button {
     height: 135px;
     width: 100%;
 }
-.wrappert.receipt {
-    height: 605px;
-}
-a.contact-menu.op {
-    opacity: 0.7;
-}
 .notification-box {
     position: absolute;
     top: 0px;
@@ -124,10 +112,10 @@ a.contact-menu.op {
 }
 .notification-box.closed {
     transition: transform .8s ease-in-out;
-    -webkit-transform : translateY(-1000px);
-    -moz-transform : translateY(-1000px);
-    -o-transform : translateY(-1000px);
-    transform : translateY(-1000px);
+    -webkit-transform : translateY(-200px);
+    -moz-transform : translateY(-200px);
+    -o-transform : translateY(-200px);
+    transform : translateY(-200px);
 }
 .notification-box span {
     position: absolute;
@@ -168,21 +156,16 @@ a.contact-menu.op {
         left: 0;
     }
     .notification-box.closed {
-        transition: transform .5s ease-in-out;
-        -webkit-transform : translateY(-1000px);
-        -moz-transform : translateY(-1000px);
-        -o-transform : translateY(-1000px);
-        transform : translateY(-1000px);
-    }
-    .wrappert.receipt {
-        height: 100%;
-        overflow-y: scroll;
+    transition: transform .5s ease-in-out;
+    -webkit-transform : translateY(-260px);
+    -moz-transform : translateY(-260px);
+    -o-transform : translateY(-260px);
+    transform : translateY(-260px);
     }
 }
 .skin {
     line-height: 22px !important;
     color: #E8C474 !important;
-    margin-bottom: 5px !important;
 }
 a.skinner {
     color: #E8C474 !important;
@@ -201,7 +184,7 @@ a.skinner:hover {
     }
 }
 .menu-list {
-    padding-bottom: 40px !important;
+    padding: 20px 0 70px !important;
     position: relative;
 }
 #menu {
@@ -292,8 +275,8 @@ a.skinner:hover {
     }
     .toggle-reserve-form a span {
         position: absolute;
-        right: 10px !important;
-        top: 1px !important;
+        right: 6px !important;
+        top: 5px !important;
     }
 
 }
@@ -506,6 +489,7 @@ hr.turkeyday {
 }
 a.contact-menu {
     color: #fff;
+    opacity: 0.8;
     font-weight: 300;
 }
 a.contact-menu:hover {
@@ -538,9 +522,6 @@ hr.gcard {
     padding-top: 0px !important;
 
 }
-.small-space {
-    padding-top: 20px !important;
-}
 hr.contact {
     border-top: 1px solid #E0B252 !important;
     left: -110px !important;
@@ -548,15 +529,9 @@ hr.contact {
 }
 p.about {
     font-size: 15px !important;
-    padding-top: 30px;
+    padding-top: 16px;
     line-height: 23px;
     letter-spacing: 0 !important;
-}
-.notification-box.gc {
-    padding: 10px 10% 20px;
-}
-.notification-box.gc p {
-    margin-bottom: 20px;
 }
 img.mh {
     max-height: 230px;
@@ -655,22 +630,22 @@ p.about.last {
         display: none;
     }
     .section-title.first {
-        padding-top: 0 !important;
+        padding-top: 0;
     }
     #menu, #about{
         padding: 0 20px;
     }
     #menu .container, #about .container {
-        padding: 0 35px 40px !important;
-    }
-    .menu-list ul li {
-        padding-right: 0 !important;
+        padding: 0 35px !important;
     }
     p.mobile-first {
         padding: 20px 0 8px 0;
         margin: 0;
         border-top: 1px solid rgba(255,255,255,0.7);
         margin-right: 0px;
+    }
+    .section-title h2 {
+        margin-bottom: 0;
     }
     .mobile-align {
         margin-bottom: 20px;
@@ -773,7 +748,7 @@ ul li:first-child h3.first {
     margin: 60px 0 16px;
     font-size: 24px !important;
 }
-.menu-list h3.first.about {
+.ts-20 {
     margin-top: 20px !important;
 }
 .menu-list ul li {
