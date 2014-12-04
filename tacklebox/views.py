@@ -23,6 +23,9 @@ def contact(request):
 def thankyou(request):
     return render_to_response('thankyou.html')
 
+def receipt(request):
+    return render_to_response('receipt.html')
+
 def failed(request):
     return render_to_response('failed.html')
 
