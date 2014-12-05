@@ -1011,6 +1011,9 @@ ul li:first-child h3.first {
 .container.contact {
     padding: 20px 0 200px;
 }
+.section-title .container {
+    padding: 0;
+}
 @media (max-width: 991px) {
     .container.contact {
         max-width: 450px;
@@ -1018,9 +1021,7 @@ ul li:first-child h3.first {
     .container.to-front {
         padding: 0;
     }
-    .section-title .container {
-        padding: 0;
-    }
+
     .module.menunav {
         display: none;
         top: 60px;
