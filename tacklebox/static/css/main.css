@@ -40,6 +40,18 @@ html, body {
 .tprice span {
     font-size: 12px !important;
 }
+span.more {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+    color: #E8C474;
+}
+.gc-steps {
+    display: none;
+}
+.gc-steps.opened {
+    display: block;
+}
 .arrow-down {
     width: 0; 
     height: 0; 
@@ -47,12 +59,22 @@ html, body {
     border-right: 6px solid transparent;
     border-top: 6px solid #fff;
 }
+ul.errorlist {
+    text-align: left !important;
+}
+ul.errorlist > li {
+    text-transform: uppercase;
+    color: #00BB82;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 0 !important;
+    margin-bottom: 10px;
+}
 input.submit-button {
     border-bottom: 0 !important;
     margin-top: 25px !important;
-    padding: 7px 0px !important;
+    padding: 7px 50px !important;
     background: rgba(224, 184, 82, 1) !important;
-    width: 30% !important;
     letter-spacing: 1px;
     text-transform: uppercase !important;
     color: #000 !important;
@@ -1425,21 +1447,22 @@ ul li:first-child h3.first {
 }
 /* END Parallax Testing Styles */
 .pay-btn {
-    margin-bottom: 25px;
+    margin: 25px 0;
     background: transparent;
     padding: 10px 20px;
-    font-size: 15px;
+    font-size: 17px;
     text-transform: uppercase;
     color: #fff;
     font-family: 'Lato';
+    letter-spacing: 1px;
     font-weight: 300;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     border-radius: 11px;
 }
 .pay-btn:hover {
-    border: none;
     background: #e0b252;
     color: #000;
+    border: 2px solid #e0b252;
 }
 .home-logo {
     display: block;
@@ -1610,6 +1633,16 @@ ul li:first-child h3.first {
     }
     .logo-top {
         margin-top: 20px !important;
+    }
+    .menu-list ul li {
+        padding-right: 20px;
+    }
+    .rp-50 {
+        padding-right: 20px;
+    }
+    span.more {
+        display: block;
+        padding: 20px 0;
     }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) { 
