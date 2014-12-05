@@ -167,8 +167,8 @@ input.submit-button {
     .toggle-reserve-form.menu {
         display: block !important;
     }
-    .menu-pieces li:first-child, .menu-pieces li:nth-child(2), .menu-pieces li:nth-child(3), .menu-pieces li:nth-child(4)  {
-        display: none !important;
+    #menu-bar {
+        display: none;
     }
     .notification-box {
         top: 0;
@@ -181,11 +181,11 @@ input.submit-button {
         left: 0;
     }
     .notification-box.closed {
-    transition: transform .5s ease-in-out;
-    -webkit-transform : translateY(-260px);
-    -moz-transform : translateY(-260px);
-    -o-transform : translateY(-260px);
-    transform : translateY(-260px);
+        transition: transform .5s ease-in-out;
+        -webkit-transform : translateY(-260px);
+        -moz-transform : translateY(-260px);
+        -o-transform : translateY(-260px);
+        transform : translateY(-260px);
     }
 }
 .skin {
@@ -264,7 +264,7 @@ a.skinner:hover {
 }
 @media (max-width: 1024px) {
     #menu-bar {
-        display: block !important;
+        display: none !important;
         top: 0;
         padding-top: 15px;
         z-index: 999999;
