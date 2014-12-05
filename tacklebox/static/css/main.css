@@ -1018,6 +1018,9 @@ ul li:first-child h3.first {
     .container.to-front {
         padding: 0;
     }
+    .section-title .container {
+        padding: 0;
+    }
     .module.menunav {
         display: none;
         top: 60px;
