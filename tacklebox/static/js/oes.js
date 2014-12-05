@@ -24,7 +24,9 @@ $('.nav-icon').click(function(){
         closeCanvas();
     }
 });
-
+$('.more').click(function(){
+    $(".gc-steps").toggleClass("opened");
+});
 $(window).resize(closeCanvas);
 $('.canvas-wrap').click(closeCanvas);
 

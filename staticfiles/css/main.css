@@ -34,6 +34,9 @@ html, body {
 .OT_ExtLink:link, .OT_ExtLink:visited, .OT_ExtLink:hover, .OT_ExtLink:active {
     display: none !important;
 }
+.toggle-reserve-form {
+    display: none !important;
+}
 .pos-rel {
     position: relative;
 }
