@@ -140,7 +140,6 @@
             rightDrawer.appendChild(rightlist);
 
             var n = 0;
-
             for (j in data.menus[i].entries){
                 if (n < leftDrawer) {
                     var listItem = document.createElement("li");
@@ -155,6 +154,7 @@
                         sectionTitle.className += 'first';
                         var sectionName = data.menus[i].entries[j].name;
                         sectionName = sectionName.replace(/-/g, ' ');
+                        sectionName = sectionName.replace(/[0-9]/g, "");
                         sectionTitle.innerHTML = sectionName;
                         listItem.appendChild(sectionTitle);
                         if (data.menus[i].entries[j].desc != null) { 
@@ -167,6 +167,7 @@
                     } else {
                         var itemName = data.menus[i].entries[j].name;
                         itemName = itemName.replace(/-/g, ' ');
+                        itemName = itemName.replace(/[0-9]/g, "");
                         itemTitle.innerHTML = itemName;
                         if (data.menus[i].entries[j].desc != null) { 
                             listItem.appendChild(itemDesc);
@@ -210,6 +211,7 @@
                         sectionTitle.className += 'first';
                         var sectionName = data.menus[i].entries[j].name;
                         sectionName = sectionName.replace(/-/g, ' ');
+                        sectionName = sectionName.replace(/[0-9]/g, "");
                         sectionTitle.innerHTML = sectionName;
                         listItem.appendChild(sectionTitle);
                         if (data.menus[i].entries[j].desc != null) { 
@@ -222,6 +224,7 @@
                     } else {
                         var itemName = data.menus[i].entries[j].name;
                         itemName = itemName.replace(/-/g, ' ');
+                        itemName = itemName.replace(/[0-9]/g, "");
                         itemTitle.innerHTML = itemName;
                         if (data.menus[i].entries[j].desc != null) { 
                             listItem.appendChild(itemDesc);
