@@ -121,7 +121,7 @@ input.submit-button {
     width: 100%;
 }
 .note-container {
-    max-width: 500px;
+    max-width: 640px;
     margin: 0 auto;
     position: relative;
 }
