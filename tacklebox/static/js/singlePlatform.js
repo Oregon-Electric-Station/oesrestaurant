@@ -138,7 +138,9 @@ for (i in data.menus) {
                 listItem.appendChild(sectionUnderline);
                 sectionCounter += 1;
             } else {
-                itemTitle.innerHTML = data.menus[i].entries[j].name;
+                var itemName = data.menus[i].entries[j].name;
+                itemName = itemName.replace(/-/g, ' ');
+                itemTitle.innerHTML = itemName;
                 if (data.menus[i].entries[j].desc != null) { 
                     listItem.appendChild(itemDesc);
                     itemDesc.innerHTML += data.menus[i].entries[j].desc;
