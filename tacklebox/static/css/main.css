@@ -120,9 +120,14 @@ input.submit-button {
     height: 445px;
     width: 100%;
 }
+.note-container {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
 .notification-box {
-    position: absolute;
-    top: 0px;
+    position: fixed;
+    top: 70px;
     display: block;
     left: 0;
     right: 0;
@@ -144,8 +149,8 @@ input.submit-button {
 }
 .notification-box span {
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: 5px;
+    right: -40px;
     width: 18px;
     cursor: pointer;
     height: 18px;
@@ -172,6 +177,10 @@ input.submit-button {
     }
     .notification-box {
         top: 0;
+        overflow-y: scroll;
+    }
+    .receipt .notification-box {
+        bottom: 0;
     }
     .wrappert {
         top: -70px;
@@ -204,10 +213,7 @@ a.skinner:hover {
     margin-bottom: 10px !important;
 }
 @media (min-width: 1080px) {
-    .notification-box span {
-        right: 120px;
-        bottom: 20px;
-    }
+    
 }
 .menu-list {
     padding: 20px 0 70px !important;
