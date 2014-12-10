@@ -157,6 +157,11 @@
                         sectionName = sectionName.replace(/-/g, ' ');
                         sectionTitle.innerHTML = sectionName;
                         listItem.appendChild(sectionTitle);
+                        if (data.menus[i].entries[j].desc != null) { 
+                            itemDesc.className += 'title-desc';
+                            listItem.appendChild(itemDesc);
+                            itemDesc.innerHTML += data.menus[i].entries[j].desc;
+                        }
                         listItem.appendChild(sectionUnderline);
                         sectionCounter += 1;
                     } else {
@@ -166,10 +171,29 @@
                         if (data.menus[i].entries[j].desc != null) { 
                             listItem.appendChild(itemDesc);
                             itemDesc.innerHTML += data.menus[i].entries[j].desc;
-                            if (data.menus[i].entries[j].prices[0] != null) {
-                                listItem.appendChild(itemPrice);
-                                itemPrice.innerHTML += data.menus[i].entries[j].prices[0].price;
-                            }
+                            for (k in data.menus[i].entries[j].prices) {   
+                                var itemPriceMulti = document.createElement("p");   
+                                listItem.appendChild(itemPriceMulti);
+                                itemPriceMulti.innerHTML += data.menus[i].entries[j].prices[k].price;
+                                if (data.menus[i].entries[j].prices[k].title != null && data.menus[i].entries[j].prices[k].title != "") {
+                                    itemPriceMulti.innerHTML += " - " + data.menus[i].entries[j].prices[k].title;
+                                }
+                                if (data.menus[i].entries[j].prices[k].unit != null && data.menus[i].entries[j].prices[k].unit != "") {
+                                    itemPriceMulti.innerHTML += " - " + data.menus[i].entries[j].prices[k].unit;
+                                }
+                            } 
+                        } else {
+                            for (k in data.menus[i].entries[j].prices) {   
+                                var itemPriceMulti = document.createElement("p");   
+                                listItem.appendChild(itemPriceMulti);
+                                itemPriceMulti.innerHTML += data.menus[i].entries[j].prices[k].price;
+                                if (data.menus[i].entries[j].prices[k].title != null && data.menus[i].entries[j].prices[k].title != "") {
+                                    itemPriceMulti.innerHTML += " - " + data.menus[i].entries[j].prices[k].title;
+                                }
+                                if (data.menus[i].entries[j].prices[k].unit != null && data.menus[i].entries[j].prices[k].unit != "") {
+                                    itemPriceMulti.innerHTML += " - " + data.menus[i].entries[j].prices[k].unit;
+                                }
+                            } 
                         }
                     }
                     list.appendChild(listItem);
@@ -188,6 +212,11 @@
                         sectionName = sectionName.replace(/-/g, ' ');
                         sectionTitle.innerHTML = sectionName;
                         listItem.appendChild(sectionTitle);
+                        if (data.menus[i].entries[j].desc != null) { 
+                            itemDesc.className += 'title-desc';
+                            listItem.appendChild(itemDesc);
+                            itemDesc.innerHTML += data.menus[i].entries[j].desc;
+                        }
                         listItem.appendChild(sectionUnderline);
                         sectionCounter += 1;
                     } else {
@@ -197,9 +226,28 @@
                         if (data.menus[i].entries[j].desc != null) { 
                             listItem.appendChild(itemDesc);
                             itemDesc.innerHTML += data.menus[i].entries[j].desc;
-                            if (data.menus[i].entries[j].prices[0] != null) {
-                                listItem.appendChild(itemPrice);
-                                itemPrice.innerHTML += data.menus[i].entries[j].prices[0].price;
+                            for (k in data.menus[i].entries[j].prices) {   
+                                var itemPriceMulti = document.createElement("p");   
+                                listItem.appendChild(itemPriceMulti);
+                                itemPriceMulti.innerHTML += data.menus[i].entries[j].prices[k].price;
+                                if (data.menus[i].entries[j].prices[k].title != null && data.menus[i].entries[j].prices[k].title != "") {
+                                    itemPriceMulti.innerHTML += " - " + data.menus[i].entries[j].prices[k].title;
+                                }
+                                if (data.menus[i].entries[j].prices[k].unit != null && data.menus[i].entries[j].prices[k].unit != "") {
+                                    itemPriceMulti.innerHTML += " - " + data.menus[i].entries[j].prices[k].unit;
+                                }
+                            } 
+                        } else {
+                            for (k in data.menus[i].entries[j].prices) {   
+                                var itemPriceMulti = document.createElement("p");   
+                                listItem.appendChild(itemPriceMulti);
+                                itemPriceMulti.innerHTML += data.menus[i].entries[j].prices[k].price;
+                                if (data.menus[i].entries[j].prices[k].title != null && data.menus[i].entries[j].prices[k].title != "") {
+                                    itemPriceMulti.innerHTML += " - " + data.menus[i].entries[j].prices[k].title;
+                                }
+                                if (data.menus[i].entries[j].prices[k].unit != null && data.menus[i].entries[j].prices[k].unit != "") {
+                                    itemPriceMulti.innerHTML += " - " + data.menus[i].entries[j].prices[k].unit;
+                                }
                             } 
                         }
                     }
