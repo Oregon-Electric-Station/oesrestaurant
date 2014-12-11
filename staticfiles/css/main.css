@@ -35,7 +35,7 @@ html, body {
     display: none !important;
 }
 .toggle-reserve-form {
-    display: none !important;
+    display: block !important;
 }
 .pos-rel {
     position: relative;
