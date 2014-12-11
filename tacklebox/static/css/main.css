@@ -49,6 +49,10 @@ span.more {
     padding: 0 10px;
     color: #E8C474;
 }
+.special-img {
+    margin-top: 25px;
+    max-width: 100%;
+}
 .gc-steps {
     display: none;
 }
