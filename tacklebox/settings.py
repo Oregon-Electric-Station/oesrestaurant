@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 't9uv7#uedu3$fhgulgyq=7z5!hq^x()a6_euopk#m8-est_iv='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = True
 
@@ -107,8 +107,8 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = "restaurantoes@gmail.com"
-EMAIL_HOST_PASSWORD = "Good8Food"
+EMAIL_HOST_USER = 'restaurantoes@gmail.com'
+EMAIL_HOST_PASSWORD = 'goodfood8'
 EMAIL_PORT = 587
 
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
