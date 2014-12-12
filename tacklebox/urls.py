@@ -16,6 +16,9 @@ urlpatterns = patterns('',
     # Gift Cards page
     url(r'^giftcards/$', 'tacklebox.views.giftcards'),
 
+    # Gift Cards page
+    url(r'^giftcards2/$', 'tacklebox.views.giftcards2'),
+
     # Events page
     url(r'^events/$', 'tacklebox.views.events'),
 

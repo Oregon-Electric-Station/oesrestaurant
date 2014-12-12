@@ -23,6 +23,9 @@ def contact(request):
 def thankyou(request):
     return render_to_response('thankyou.html')
 
+def giftcards2(request):
+    return render_to_response('giftcards2.html')
+
 def receipt(request):
     return render_to_response('receipt.html')
 
