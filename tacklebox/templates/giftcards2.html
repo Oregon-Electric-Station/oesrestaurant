@@ -48,11 +48,17 @@
                                 <p class="about">There are two convenient ways to purchase an Oregon Electric Station Gift Card, you can order a gift card online or buy one at the restaurant.  Oregon Electric Station gift cards can be purchased in any denomination and do not expire.</p>
                             </li>
                         </ul>
-                        <button class="pay-btn" type="button">Purchase Here</button>
-                        <div class="store-front">
-                            <div id="my-store-6222138"></div>
-                            <script type="text/javascript" src="http://app.ecwid.com/script.js?6222138" charset="utf-8"></script><script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(3,3) list(10) table(20)","categoryView=grid","searchView=list","id=my-store-6222138");</script>
-                        </div>
+                        <h3 class="first norm no-top-space">Thinking about purchasing a card?<span class="more">Read more...</span></h3>
+                        <ul class="gc-steps">
+                            <li class="rp-50 bp-20">
+                                <p class="about first">Step 1: Click the Purchase Here button and you will be redirected to FirstData's website.</p>
+                                <p class="about res-steps">Step 2: Enter the total you'd like to add to the Gift Card in the amount field and click Submit.</p>
+                                <p class="about res-steps">Step 3: Enter your Credit Card, Mailing Address, Email, and Verification Code. Then click Pay with Your Credit Card.</p>
+                                <p class="about res-steps">Step 4: You will be re-directed back to our Receipt page and receive an email confirmation message that your order was approved.</p>
+                                <p class="about res-steps">Step 5: Your order will be processed within 24 hours and shipped to your billing address. If you would like to have your purchase shipped to an address other than the billing address you entered on the payment page please email us at <a class="skin" href="mailto:giftcards@oesrestaurant.com">giftcards@oesrestaurant.com</a></p>
+                            </li>
+                        </ul>
+                        <div id="cpf3f00eb0a9" style="margin: 10px 0" onclick="document.getElementById('pay_now_form_4f0a49fec1').submit()"><div><div class='r-bg '><span class='r-fg r-fg-3'></span> <span class='r-fg r-fg-2'></span> <span class='r-fg r-fg-1'></span> <span class='r-fg r-fg-0'></span> </div><form target="_blank" action="https://globalgatewaye4.firstdata.com/pay" id="pay_now_form_4f0a49fec1" method="post"><input name="x_login" type="hidden" value="WSP-OREGO-z6EEewA1qw" /><input name="x_show_form" type="hidden" value="PAYMENT_FORM" /><input name="x_fp_sequence" type="hidden" value="14153294473266588352" /><input name="x_fp_hash" type="hidden" value="PNB-1.0-9c1d149362f1ea97e45ff661fb09a44ce0ad424f" /><input name="x_amount" type="hidden" /><input name="x_currency_code" type="hidden" value="USD" /><input name="x_test_request" type="hidden" value="FALSE" /><input name="x_relay_response" type="hidden" value="" /><input name="donation_prompt" type="hidden" /><input name="button_code" type="hidden" value="Pay Now Oregon Electric Station" /><div class="cpwrap"><button class="pay-btn" type="button">Purchase Here</button></div></form><div class='r-bg '><span class='r-fg r-fg-0'></span> <span class='r-fg r-fg-1'></span> <span class='r-fg r-fg-2'></span> <span class='r-fg r-fg-3'></span> </div></div></div>
                     </div>
                     <div class="col-md-3 giftcard-media">
                         <img src="../static/images/OES7.jpg" />
@@ -64,5 +70,8 @@
     <script type="text/javascript">
         $(".header li a").removeClass("selected");
         $(".header li a.5").addClass("selected");
+        $(".pay-btn").mousedown(function(event) {
+            $(this).attr('target','_blank');
+        }
     </script>
 {% endblock %}
