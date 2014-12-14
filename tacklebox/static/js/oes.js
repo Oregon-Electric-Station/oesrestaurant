@@ -28,6 +28,7 @@ $('.more').click(function(){
     $(".gc-steps").toggleClass("opened");
 });
 $(".ecwid-productBrowser-head").fadeOut();
+
 $(window).resize(closeCanvas);
 $('.canvas-wrap').click(closeCanvas);
 
@@ -40,7 +41,8 @@ $(".notification-closer").click(function(){
     $(".notification-box").toggleClass('closed');
 });
 $(".pay-btn").click(function() {
-        $(".store-front").toggleClass("displayed");
+        // $(".store-front").toggleClass("displayed");
+        $(".store-front").slideDown(500);
 });
 
 $(".toggle-reserve").click(function(){
