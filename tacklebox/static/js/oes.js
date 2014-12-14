@@ -38,6 +38,9 @@ $(".toggle-drop").click(function(){
 $(".notification-closer").click(function(){
     $(".notification-box").toggleClass('closed');
 });
+$(".pay-btn").click(function() {
+        $(".store-front").toggleClass("displayed");
+});
 
 $(".toggle-reserve").click(function(){
     $(".reserve-form-mask").toggleClass('open');

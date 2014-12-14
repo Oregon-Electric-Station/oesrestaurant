@@ -1640,6 +1640,13 @@ ul li:first-child h3.first {
         background-size: 2000px;
     }
 }
+.store-front {
+    background: #fff;
+    display: none;
+}
+.store-front.displayed {
+    display: block !important;
+}
 @media screen and (max-width: 600px) { 
     .home-logo {
         min-width: 220px;
@@ -1686,4 +1693,7 @@ ul li:first-child h3.first {
     .mobile-tiny {
         font-size: 28px !important;
     }
+}
+table.ecwid-productBrowser-auth-mini.ecwid-productBrowser-auth-mini-horizontal {
+    display: none !important;
 }
