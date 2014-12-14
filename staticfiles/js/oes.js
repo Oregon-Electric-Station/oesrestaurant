@@ -27,6 +27,7 @@ $('.nav-icon').click(function(){
 $('.more').click(function(){
     $(".gc-steps").toggleClass("opened");
 });
+$(".ecwid-productBrowser-head").fadeOut();
 $(window).resize(closeCanvas);
 $('.canvas-wrap').click(closeCanvas);
 

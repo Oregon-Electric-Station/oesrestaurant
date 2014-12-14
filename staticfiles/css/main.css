@@ -1642,6 +1642,9 @@ ul li:first-child h3.first {
 }
 .store-front {
     background: #fff;
+    padding: 25px 20px;
+    opacity: .9;
+    border-radius: 10px;
     display: none;
 }
 .store-front.displayed {
