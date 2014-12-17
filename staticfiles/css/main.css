@@ -17,6 +17,11 @@ html, body {
 .noscroll {
     overflow: hidden !important;
 }
+.button-space {
+    margin-top: 20px !important;
+    display: inline-block;
+}
+
 #OT_form {
     margin-bottom: 28px !important;
     margin-top: 24px !important;
@@ -1480,6 +1485,16 @@ ul li:first-child h3.first {
     background: #e0b252;
     color: #000;
     border: 2px solid #e0b252;
+}
+a.pay-btn:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+a.pay-btn:active {
+    background: #e0b252;
+    color: #000;
+    border: 2px solid #e0b252;
+    text-decoration: none;
 }
 .home-logo {
     display: block;
