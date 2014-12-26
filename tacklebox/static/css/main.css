@@ -403,7 +403,7 @@ a, a:hover {
     z-index: 99999;
 }
 .section-title.home h2 {
-    font-size: 42px;
+    font-size: 38px;
 }
 .bg-trans-black {
     background: rgba(0,0,0,0.8);
@@ -725,7 +725,8 @@ p.about.last {
     width: 240px;
     z-index: 9999;
     height: 230px;
-    background-image: url('../images/red-leaf.png');
+/*    background-image: url('../images/red-leaf.png'); */    
+    background-image: url('../images/newyears-burst.png');
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -740,7 +741,8 @@ p.about.last {
     width: 130px;
     z-index: 9999;
     height: 170px;
-    background-image: url('../images/yellow-leaf.png');
+    /*background-image: url('../images/yellow-leaf.png');*/
+    background-image: url('../images/newyears-burst.png');
     background-size: 100%;
     background-repeat: no-repeat;
 }
