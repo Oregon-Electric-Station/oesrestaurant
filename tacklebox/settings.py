@@ -105,6 +105,9 @@ STATICFILES_DIRS = (
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
+
+
+# ROOMS AND PRIVATE EVENT INQUIRY EMAILER SETTINGS
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'restaurantoes@gmail.com'

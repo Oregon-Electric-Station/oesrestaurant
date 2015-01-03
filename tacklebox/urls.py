@@ -20,7 +20,7 @@ urlpatterns = patterns('',
     url(r'^giftcards2/$', 'tacklebox.views.giftcards2'),
 
     # Events page
-    url(r'^events/$', 'tacklebox.views.events'),
+    url(r'^rooms/$', 'tacklebox.views.rooms'),
 
     # Receipt page
     url(r'^receipt/$', 'tacklebox.views.receipt'),

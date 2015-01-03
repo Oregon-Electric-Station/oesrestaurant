@@ -32,7 +32,7 @@ def receipt(request):
 def failed(request):
     return render_to_response('failed.html')
 
-def events(request):
+def rooms(request):
 	# if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
@@ -53,7 +53,7 @@ def events(request):
     # if a GET (or any other method) we'll create a blank form
     else:
         form = ContactForm()
-    return render(request, 'events.html', {'form': form})
+    return render(request, 'rooms.html', {'form': form})
 
 def about(request):
     return render_to_response('about.html')
