@@ -737,15 +737,15 @@ p.about.last {
 .ur-leaf {
     position: absolute;
     right: -20px;
-    top: -40px;
+    top: -80px;
     display: block;
-    width: 130px;
+    width: 190px;
     z-index: 9999;
     height: 170px;
     /* background-image: url('../images/yellow-leaf.png'); */
     /* background-image: url('../images/newyears-burst.png'); */
-    background-image: url('../images/icon-wine-glasses.png');
-    background-size: 50%;
+    background-image: url('../images/icon-happy-hour.png');
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 .section-title .col-md-7 p:first-child, .section-title .col-md-6 p:first-child {
