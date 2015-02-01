@@ -21,7 +21,10 @@ html, body {
     margin-top: 20px !important;
     display: inline-block;
 }
-
+.home-float {
+    margin: 20px 0 10px;
+    float: right;
+}
 #OT_form {
     margin-bottom: 28px !important;
     margin-top: 24px !important;
@@ -400,7 +403,6 @@ a, a:hover {
 .top-row-space.home {
     margin-top: 200px;
     position: relative;
-    z-index: 99999;
 }
 .section-title.home h2 {
     font-size: 38px;
@@ -727,7 +729,8 @@ p.about.last {
     height: 230px;
 /*    background-image: url('../images/red-leaf.png'); */    
 /*    background-image: url('../images/newyears-burst.png'); */
-    background-image: url('../images/icon-wine-glasses.png');
+  /*  background-image: url('../images/icon-wine-glasses.png');*/
+    background-image: url('../images/oes-valentines-heart.png');
     background-size: 30%;
     background-repeat: no-repeat;
 }
@@ -736,15 +739,17 @@ p.about.last {
 }
 .ur-leaf {
     position: absolute;
-    right: -20px;
+    right: 0px;
     top: -80px;
     display: block;
-    width: 190px;
-    z-index: 9999;
+    width: 290px;
+    /* z-index: 9999; */
+    opacity: .9;
     height: 170px;
     /* background-image: url('../images/yellow-leaf.png'); */
     /* background-image: url('../images/newyears-burst.png'); */
-    background-image: url('../images/icon-happy-hour.png');
+    /* background-image: url('../images/icon-happy-hour.png'); */
+    background-image: url('../images/oes-valentines-heart.png');
     background-size: 100%;
     background-repeat: no-repeat;
 }
