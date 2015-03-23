@@ -660,7 +660,7 @@ p.about.last {
         margin-top: 10px !important;
     }
     ul.brunch-list li {
-        font-weight: 300;
+        font-weight: 300 !important;
     }
     .mobile-home-logo {
         display: block !important;
