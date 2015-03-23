@@ -224,11 +224,8 @@ a.skinner:hover {
 .bs-10 {
     margin-bottom: 10px !important;
 }
-@media (min-width: 1080px) {
-    
-}
 .menu-list {
-    padding: 20px 0 70px !important;
+    padding: 20px 0 !important;
     position: relative;
 }
 #menu {
@@ -750,6 +747,37 @@ p.about.last {
     margin-top: 40px;
     padding-left: 20px;
 }
+.ot-reserve-now {
+    max-height: 40px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+.lp {
+    padding-left: 25px !important;
+}
+p.mini {
+    font-family: 'Lato';
+    font-size: 13px;
+    color: #FFFFFF;
+    line-height: 16px;
+    font-weight: 300;
+    margin: 15px 0 0;
+}
+p.mini.two {
+    margin-top: 15px;
+}
+.thankyou {
+    font-family: 'Lato';
+    font-size: 22px;
+    color: #FFFFFF;
+    line-height: 32px;
+    font-style: italic;
+    margin: 13px 0 0;
+    font-weight: 300;
+}
+.tpb {
+    padding: 45px 0;
+}
 .pr-30 {
     padding-right: 30px !important;
     padding-bottom: 0 !important;
@@ -1088,6 +1116,19 @@ ul li:first-child h3.first {
     .container.contact {
         max-width: 450px;
     }
+    .lp {
+        padding-left: 0 !important;
+    }
+    .thankyou {
+        margin-bottom: 20px;
+    }
+    .mini {
+        font-size: 18px !important;
+        line-height: 22px !important;
+    }
+    .mini.two {
+        margin-bottom: 10px
+    }
     .container.to-front {
         padding: 0;
     }
@@ -1102,7 +1143,7 @@ ul li:first-child h3.first {
         max-width: 230px;
     }
     .container {
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
     }
     .pad-left {
