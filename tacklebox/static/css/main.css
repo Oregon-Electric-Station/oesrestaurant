@@ -659,6 +659,9 @@ p.about.last {
     .bi-line {
         margin-top: 10px !important;
     }
+    ul.brunch-list li {
+        font-weight: 300;
+    }
     .mobile-home-logo {
         display: block !important;
     }
