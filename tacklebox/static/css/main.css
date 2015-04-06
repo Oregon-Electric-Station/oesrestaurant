@@ -105,7 +105,9 @@ input.submit-button {
     padding: 50px 0;
     margin-bottom: 100px;
 }
-
+.top-row-spacer {
+    margin-top: 500px;
+}
 .wrapper {
     position: fixed;
     top:0;
